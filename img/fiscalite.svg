@@ -1,0 +1,60 @@
+<svg id="Groupe_24" data-name="Groupe 24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e7f2f9;
+      }
+
+      .cls-2 {
+        fill: #d4e4ef;
+      }
+
+      .cls-3 {
+        fill: #5da7d6;
+      }
+
+      .cls-4 {
+        fill: #024d7e;
+      }
+
+      .cls-5 {
+        fill: #dfdfea;
+      }
+
+      .cls-6 {
+        fill: #fff;
+      }
+
+      .cls-7 {
+        fill: #a3c9e2;
+      }
+    </style>
+  </defs>
+  <path id="Tracé_88" data-name="Tracé 88" class="cls-1" d="M107.2,0H94.8V25h16.667V4.263Z" transform="translate(-86.467)"/>
+  <path id="Tracé_89" data-name="Tracé 89" class="cls-2" d="M190.363,4.263,186.1,0h-4.8V25h9.063Z" transform="translate(-165.363)"/>
+  <path id="Tracé_90" data-name="Tracé 90" class="cls-3" d="M9.977,79.867H1.134A1.137,1.137,0,0,1,0,78.733v-14.4A1.137,1.137,0,0,1,1.134,63.2H9.977a1.137,1.137,0,0,1,1.134,1.134v14.4A1.131,1.131,0,0,1,9.977,79.867Z" transform="translate(0 -57.644)"/>
+  <path id="Tracé_91" data-name="Tracé 91" class="cls-4" d="M67.348,63.2H62.9V79.867h4.448a1.137,1.137,0,0,0,1.134-1.134v-14.4A1.137,1.137,0,0,0,67.348,63.2Z" transform="translate(-57.371 -57.644)"/>
+  <rect id="Rectangle_60" data-name="Rectangle 60" class="cls-5" width="9.089" height="3.701" transform="translate(1.011 6.566)"/>
+  <rect id="Rectangle_61" data-name="Rectangle 61" class="cls-3" width="4.571" height="3.701" transform="translate(5.529 6.566)"/>
+  <g id="Groupe_22" data-name="Groupe 22" transform="translate(1.011 11.788)">
+    <rect id="Rectangle_62" data-name="Rectangle 62" class="cls-6" width="1.767" height="1.582"/>
+    <rect id="Rectangle_63" data-name="Rectangle 63" class="cls-6" width="1.767" height="1.582" transform="translate(0 2.435)"/>
+    <rect id="Rectangle_64" data-name="Rectangle 64" class="cls-6" width="1.767" height="1.582" transform="translate(0 4.808)"/>
+    <rect id="Rectangle_65" data-name="Rectangle 65" class="cls-6" width="1.767" height="1.582" transform="translate(0 7.173)"/>
+    <rect id="Rectangle_66" data-name="Rectangle 66" class="cls-6" width="1.767" height="1.582" transform="translate(2.444)"/>
+    <rect id="Rectangle_67" data-name="Rectangle 67" class="cls-6" width="1.767" height="1.582" transform="translate(2.444 2.435)"/>
+    <rect id="Rectangle_68" data-name="Rectangle 68" class="cls-6" width="1.767" height="1.582" transform="translate(2.444 4.808)"/>
+    <rect id="Rectangle_69" data-name="Rectangle 69" class="cls-6" width="1.767" height="1.582" transform="translate(2.444 7.173)"/>
+  </g>
+  <g id="Groupe_23" data-name="Groupe 23" transform="translate(5.89)">
+    <rect id="Rectangle_70" data-name="Rectangle 70" class="cls-7" width="1.767" height="1.582" transform="translate(0 11.788)"/>
+    <rect id="Rectangle_71" data-name="Rectangle 71" class="cls-7" width="1.767" height="1.582" transform="translate(0 14.223)"/>
+    <rect id="Rectangle_72" data-name="Rectangle 72" class="cls-7" width="1.767" height="1.582" transform="translate(0 16.596)"/>
+    <rect id="Rectangle_73" data-name="Rectangle 73" class="cls-7" width="1.767" height="1.582" transform="translate(0 18.961)"/>
+    <rect id="Rectangle_74" data-name="Rectangle 74" class="cls-7" width="1.767" height="1.582" transform="translate(2.444 11.788)"/>
+    <rect id="Rectangle_75" data-name="Rectangle 75" class="cls-7" width="1.767" height="1.582" transform="translate(2.444 14.223)"/>
+    <rect id="Rectangle_76" data-name="Rectangle 76" class="cls-7" width="1.767" height="1.582" transform="translate(2.444 16.596)"/>
+    <rect id="Rectangle_77" data-name="Rectangle 77" class="cls-7" width="1.767" height="1.582" transform="translate(2.444 18.961)"/>
+    <path id="Tracé_92" data-name="Tracé 92" class="cls-7" d="M235.9,4.263h4.263L235.9,0Z" transform="translate(-221.053)"/>
+  </g>
+</svg>
