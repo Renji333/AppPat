@@ -1,0 +1,326 @@
+/* All */
+
+#wpadminbar{
+    display: none !important;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+body{
+    background-color: #F5F5F5;
+}
+
+/* Header */
+
+header {
+    height: 70px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 0 0 1px rgba(0,0,0,0.08);
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.HeaderBlock{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1px 15px 0 30px;
+    position: relative;
+    line-height: 20px;
+}
+
+.AppNameTitle{
+    font-size: 26px;
+    font-family: poppinsextrabold;
+    color: #024D7E !important;
+    float: left;
+}
+
+.AppNameTitle::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    height: 100%;
+    left: 0;
+    width: 20px;
+    background: #1cc7d0;
+    background: -moz-linear-gradient(left, #1cc7d0 0%, #2dde98 100%);
+    background: -webkit-linear-gradient(left, #1cc7d0 0%,#2dde98 100%);
+    background: linear-gradient(to right, #1cc7d0 0%,#2dde98 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cc7d0', endColorstr='#2dde98',GradientType=1 );
+}
+
+.AppLogout{
+    height: 100%;
+    float: right;
+    padding: 0 15px 0 15px;
+    border-left: 1px solid #E9EAEB;
+}
+
+.AppLogout img.UserAvatar{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.AppLogout span.UserName {
+    padding: 0 15px 0 15px;
+    color: #041738;
+    font-family: poppinsregular;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.AppLogout .LogOutIcon{
+    width: 17px;
+}
+
+.AppSearch{
+    height: 100%;
+    float: right;
+    padding: 0 15px 0 15px;
+}
+
+.AppSearch .search-form{
+    width: 100%;
+}
+
+.AppSearch .input-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+}
+
+.AppSearch .input-group .form-control {
+    height: 35px;
+    background-color: #F7F7FA;
+    display: table-cell;
+    position: relative;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.AppSearch .input-group .input-group-btn {
+    position: relative;
+    font-size: 0;
+    white-space: nowrap;
+    width: 1%;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.AppSearch .input-group .input-group-btn button {
+    color: #004673;
+    font-family: poppinsbold;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: relative;
+    background-color: #fff;
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    white-space: nowrap;
+    line-height: 1.42857143;
+    border-radius: 0 4px 4px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    z-index: 2;
+    margin-left: -1px;
+    overflow: visible;
+}
+
+/* Content */
+/* Toc */
+
+.mm-wrapper_sidebar-expanded-30 .mm-menu_sidebar-expanded {
+    width: 20% !important;
+}
+
+[class*="mm-wrapper_sidebar-expanded-"] .mm-menu_sidebar-expanded.toc{
+    height: calc(100% - 70px);
+    width: 350px;
+    top: 70px !important;
+    position: fixed;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeaf0+0,dddde6+100 */
+    background: #eaeaf0; /* Old browsers */
+    background: -moz-linear-gradient(top, #eaeaf0 0%, #dddde6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #eaeaf0 0%,#dddde6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #eaeaf0 0%,#dddde6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaf0', endColorstr='#dddde6',GradientType=0 ); /* IE6-9 */
+}
+
+/* Footer */
+
+footer{
+    background-color: #ffffff;
+    border-top: 1px solid #E9EAEB;
+    height: 40px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100% - 20%);
+}
+
+footer ul{
+    text-align: right;
+    margin: 8px 10px 0 0;
+}
+
+footer ul li{
+    display: inline-block;
+    font-family: source_sans_proregular;
+    font-size: 13px;
+    color: #707070;
+}
+
+footer ul li img{
+    width: 60px;
+    height: 13px;
+    vertical-align: inherit !important;
+    padding-left: 5px;
+    position:relative;
+    top: 1px
+}
+
+/* Main-Container */
+
+.mm-wrapper_sidebar-expanded-30:not(.mm-wrapper_sidebar-closed) .mm-slideout {
+    width: 80%;
+}
+
+.mm-wrapper_sidebar-expanded-30:not(.mm-wrapper_sidebar-closed) .mm-slideout {
+    -webkit-transform: translate(25%,0) !important;
+    -ms-transform: translate(25%,0) !important;
+    transform: translate(25%,0) !important;
+    -webkit-transform: translate3d(25%,0,0) !important;
+    transform: translate3d(25%,0,0) !important;
+}
+
+.main-container {
+    position: fixed;
+    top: 70px;
+    overflow: auto;
+    width: calc(100% - 350px);
+    height: calc(100% - (70px + 40px));
+    min-height: 0 !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Loop */
+
+time, p{
+    color: #333333;
+    font-family: source_sans_proregular;
+}
+
+.post-info a{
+    font-family: source_sans_proregular;
+}
+
+time{
+    font-size: 12px;
+}
+
+p, .seeProfile span{
+    font-size: 14px;
+}
+
+article.container-article {
+    padding-left: 65px;
+    position: relative;
+}
+
+article.container-article::before {
+    content: '';
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article.fiscalite.container-article::before {
+    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/b1/f1/12/b1f112d0-3445-fbe9-3c66-af001a80b727/mzl.kzkjtkaq.png/246x0w.jpg");
+}
+
+article.immobilier.container-article::before {
+    background-image: url("http://images6.fanpop.com/image/photos/35300000/Flash-Icon-the-flash-35304507-200-200.png");
+}
+
+.titleFocus{
+    color: #0268AA;
+    font-family: poppinslight;
+    font-size: 21px;
+    position: absolute;
+    top: 11px;
+    left: 23px;
+}
+
+article.container-article-focus {
+    padding-left: 288px;
+    position: relative;
+    padding-top: 31px;
+    min-height: 233px;
+    border: 2px solid #1CC7CE;
+}
+
+article.container-article-focus::before {
+    content: '';
+    width: 250px;
+    height: 164px;
+    position: absolute;
+    left: 25px;
+    top: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article.container-article-focus h4{
+    font-size: 22px;
+}
+
+article.immobilier.container-article-focus::before {
+    background-image: url("https://www.artemiscourtage.com/wp-content/uploads/2017/11/credit-immobilier-ptz-1-760x358.jpg");
+}

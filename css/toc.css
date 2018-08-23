@@ -1,0 +1,239 @@
+/* Toc : HENRI */
+
+.mm-navbar.mm-navbar_tabs {
+    position:  absolute;
+    top:  0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.mm-navbar.mm-navbar_tabs img {
+    display: inline-block;
+}
+
+.mm-navbars_top.mm-navbars_has-tabs {
+    position: relative;
+    width: 100px;
+    height: 100vh;
+    background: #0268aa;
+    background: -moz-linear-gradient(top, #0268aa 0%, #00263e 100%);
+    background: -webkit-linear-gradient(top, #0268aa 0%,#00263e 100%);
+    background: linear-gradient(to bottom, #0268aa 0%,#00263e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0268aa', endColorstr='#00263e',GradientType=0 );
+}
+
+.mm-navbar.mm-navbar_tabs a {
+    color: white;
+    display: block;
+    border: none;
+    text-transform: uppercase;
+}
+
+.mm-navbar.mm-navbar_tabs a {
+    border-bottom: solid 1px #3990C8;
+}
+
+.mm-navbar.mm-navbar_tabs {
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.mm-panels {
+    width: calc(100% - 100px);
+    top: 0 !important;
+    left: 100px;
+}
+
+.mm-navbar a.mm-navbar__tab_selected {
+    background: transparent !important;
+    position: relative;
+}
+
+.mm-navbar a.mm-navbar__tab_selected::after {
+    content:"";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 8px;
+    background: #1cc7d0;
+    background: -moz-linear-gradient(left, #1cc7d0 0%, #2dde98 100%);
+    background: -webkit-linear-gradient(left, #1cc7d0 0%,#2dde98 100%);
+    background: linear-gradient(to right, #1cc7d0 0%,#2dde98 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cc7d0', endColorstr='#2dde98',GradientType=1 );
+}
+
+.mm-navbar.mm-navbar_has-btns {
+    left: 100px;
+    top: 0;
+    display: inline-flex;
+    background-color: white;
+}
+
+.mm-navbars_top .mm-navbar_tabs, .mm-navbars_top .mm-navbar_tabs~.mm-navbar {
+    background: transparent !important;
+}
+
+.mm-navbars_top .mm-navbar_tabs~.mm-navbar {
+    background-color: transparent !important;
+}
+
+.mm-navbar {
+    background-color: #FFF;
+    border-bottom: solid 1px #0268AA;
+    height: 39px;
+    text-transform: uppercase;
+}
+
+.mm-navbar a.mm-navbar__title {
+    color: #004673 !important;
+    font-weight: 700;
+}
+
+.mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
+    border-color: #004673 !important;
+}
+
+span.mm-navbar__breadcrumbs {
+    color: #000 !important;
+}
+
+.mm-navbar_tabs>:not(.mm-navbar__tab_selected), .mm-navbars_bottom.mm-navbars_has-tabs .mm-navbar_tabs~.mm-navbar, .mm-navbars_top.mm-navbars_has-tabs>.mm-navbar:not(.mm-navbar_tabs) {
+    background-color: transparent;
+}
+
+.mm-navbar_tabs span {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 10px;
+    line-height: normal;
+}
+
+.mm-panels {
+    background: #eaeaf0;
+    background: -moz-linear-gradient(left, #eaeaf0 0%, #dddde6 100%);
+    background: -webkit-linear-gradient(left, #eaeaf0 0%,#dddde6 100%);
+    background: linear-gradient(to right, #eaeaf0 0%,#dddde6 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaf0', endColorstr='#dddde6',GradientType=1 );
+}
+
+.mm-listitem:after {
+    left: 0;
+}
+
+li.mm-listitem {
+    background: white;
+    color: #333333;
+    border-color: #DFDFEA;
+    padding: 5px;
+}
+
+.mm-menu .mm-listview .mm-btn_next:before, .mm-menu .mm-listview .mm-btn_next:after {
+    border-color: #333333;
+}
+
+.mm-counter {
+    color: #333333;
+}
+
+.mm-navbar span.mm-navbar__breadcrumbs a {
+    color: #000;
+}
+
+.mm-btn:after, .mm-btn:before {
+    border-color: #000;
+}
+
+.mm-listview a:not(.mm-btn_next) {
+    padding-left: 40px;
+    border-radius: 30px;
+}
+
+.mm-listview a:not(.mm-btn_next)::before {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 8px;
+    border: solid 2px #3CB8B7;
+    top: 50%;
+    margin-top: -6px;
+    left: 25px;
+}
+
+.mm-listitem_selected a:not(.mm-btn_next)::before {
+    border: solid 2px #0268AA;
+}
+
+mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, mm-menu_selected-hover .mm-listitem>a:not(.mm-btn_fullwidth):hover {
+    background: transparent;
+}
+
+.mm-slideout {
+    transition: unset;
+    transition: unset;
+    transition: unset;
+}
+
+.mm-navbars_top .mm-navbar__tab_selected {
+    margin-bottom: 0;
+}
+
+.icoActualite, .icoFiscalite, .icoFamille, .icoEpargne, .icoRetraite, .icoCredits, .icoDirigeants, .icoDossiers, .icoOutils {
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+}
+
+.icoActualite::before, .icoFiscalite::before, .icoFamille::before, .icoEpargne::before, .icoRetraite::before, .icoCredits::before, .icoDirigeants::before, .icoDossiers::before, .icoOutils::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: unset;
+}
+
+.icoActualite::before {
+    background-image: url("../img/actualites.svg");
+}
+
+.icoFiscalite::before {
+    background-image: url("../img/fiscalite.svg");
+}
+
+.icoFamille::before {
+    background-image: url("../img/famille.svg");
+}
+
+.icoEpargne::before {
+    background-image: url("../img/epargne.svg");
+}
+
+.icoRetraite::before {
+    background-image: url("../img/retraite.svg");
+}
+
+.icoCredits::before {
+    background-image: url("../img/credits.svg");
+}
+
+.icoDirigeants::before {
+    background-image: url("../img/dirigeants.svg");
+}
+
+.icoDossiers::before {
+    background-image: url("../img/dossiers.svg");
+}
+
+.icoOutils::before {
+    background-image: url("../img/outils.svg");
+}
+

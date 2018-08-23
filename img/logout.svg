@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.568 17.697">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #960000;
+      }
+    </style>
+  </defs>
+  <g id="icon" transform="translate(-0.089 0)">
+    <path id="Tracé_336" data-name="Tracé 336" class="cls-1" d="M7.5,8.227V1.371a1.371,1.371,0,0,1,2.742,0V8.227a1.371,1.371,0,1,1-2.742,0Zm6.806-6.216a1.028,1.028,0,0,0-1.274,1.615,6.728,6.728,0,1,1-8.325,0A1.029,1.029,0,1,0,3.436,2.013a8.784,8.784,0,1,0,10.872,0Z" transform="translate(0)"/>
+  </g>
+</svg>
