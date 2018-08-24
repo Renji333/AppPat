@@ -90,7 +90,8 @@
 
 .mm-navbar a.mm-navbar__title {
     color: #004673 !important;
-    font-weight: 700;
+    font-family: poppinssemibold;
+    font-size: 14px;
 }
 
 .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
@@ -110,6 +111,7 @@ span.mm-navbar__breadcrumbs {
     margin-right: 8px;
     font-size: 10px;
     line-height: normal;
+    font-family: poppinsregular;
 }
 
 .mm-panels {
@@ -129,6 +131,8 @@ li.mm-listitem {
     color: #333333;
     border-color: #DFDFEA;
     padding: 5px;
+    font-family: poppinsregular;
+    font-size: 14px;
 }
 
 .mm-menu .mm-listview .mm-btn_next:before, .mm-menu .mm-listview .mm-btn_next:after {
@@ -162,6 +166,10 @@ li.mm-listitem {
     top: 50%;
     margin-top: -6px;
     left: 25px;
+}
+
+.mm-listitem_selected a{
+    background-color: #F5F5F5 !important;
 }
 
 .mm-listitem_selected a:not(.mm-btn_next)::before {

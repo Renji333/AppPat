@@ -18,8 +18,18 @@ a{
     text-decoration: none !important;
 }
 
+a:hover, a:active, a:focus {
+    outline: 0;
+}
+
 body{
     background-color: #F5F5F5;
+    margin: 0;
+    line-height: 1.42857143;
+}
+
+p {
+    margin: 0 0 10px 0;
 }
 
 /* Header */
@@ -248,26 +258,19 @@ footer ul li img{
 
 /* Loop */
 
-time, p{
-    color: #333333;
-    font-family: source_sans_proregular;
-}
-
-.post-info a{
-    font-family: source_sans_proregular;
-}
-
-time{
-    font-size: 12px;
-}
-
-p, .seeProfile span{
-    font-size: 14px;
-}
-
 article.container-article {
+    background-color: #ffffff;
+    border: 1px solid #E9EAEB;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 6px;
     padding-left: 65px;
     position: relative;
+}
+
+article.container-article:hover {
+    border: 1px solid #1CC7CE;
 }
 
 article.container-article::before {
@@ -285,10 +288,37 @@ article.fiscalite.container-article::before {
     background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/b1/f1/12/b1f112d0-3445-fbe9-3c66-af001a80b727/mzl.kzkjtkaq.png/246x0w.jpg");
 }
 
-article.immobilier.container-article::before {
-    background-image: url("http://images6.fanpop.com/image/photos/35300000/Flash-Icon-the-flash-35304507-200-200.png");
+article.container-article h4 {
+    font-size: 16px;
+    margin: 20px 0 10px 0;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: poppinsbold;
+    color: #024D7E;
+    font-weight: 500;
+    line-height: 1;
 }
 
+article.container-article p{
+    margin: 2px 0 10px 0;
+}
+
+time, p{
+    color: #333333;
+    font-family: source_sans_proregular;
+}
+
+.post-info a{
+    font-family: source_sans_proregular;
+}
+
+time{
+    font-size: 12px;
+}
+
+p, .seeProfile span{
+    font-size: 14px;
+}
 .titleFocus{
     color: #0268AA;
     font-family: poppinslight;
@@ -323,4 +353,95 @@ article.container-article-focus h4{
 
 article.immobilier.container-article-focus::before {
     background-image: url("https://www.artemiscourtage.com/wp-content/uploads/2017/11/credit-immobilier-ptz-1-760x358.jpg");
+}
+
+/* Single */
+/* Article Post Content Design */
+article.post{
+    background: #FFFFFF;
+    border-radius: 6px;
+    padding: 15px;
+    padding-top: 15px;
+    padding-left: 65px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+article.post::before {
+    content: '';
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+article.post.fiscalite::before {
+    background-image: url("https://imgc.allpostersimages.com/img/print/affiches/batman-logo_a-G-8646921-0.jpg");
+}
+
+/* Post Icons Header Design */
+article.post div.actionsIcons{
+    float: right;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+article.post i {
+    font-size: 20px;
+    color: #0065A5;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+article.post i.fa-chevron-left, article.post i.fa-chevron-right{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* Post Text Content Design */
+
+article.post a{
+    color: #337ab7 !important;
+}
+
+article.post h1, article.post h2, article.post h3, article.post h4, article.post h5, article.post h6 {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-family: poppinsbold;
+    color: #024D7E;
+}
+
+article.post h1 {
+    font-size: 22px;
+}
+
+article.post h2 {
+    font-size: 16px;
+}
+
+article.post h3 {
+    font-size: 14px;
+}
+
+article.post h3, article.post h4 , article.post h5 , article.post h6{
+    font-family: 'poppinsmedium';
+    margin-bottom: 10px;
+}
+
+article.post li{
+    list-style-type: none; /* no default bullets */
+}
+
+article.post li::before {
+    margin-right: 10px;
+    margin-bottom: 2px;
+    height: 7px;
+    width: 7px;
+    display: inline-block;
+    content: "";
+    background-color: #1FCCC4 !important;
 }
