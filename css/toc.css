@@ -1,5 +1,10 @@
 /* Toc : HENRI */
 
+nav:not(.mm-menu)
+{
+    display: none;
+}
+
 .mm-navbar.mm-navbar_tabs {
     position:  absolute;
     top:  0;

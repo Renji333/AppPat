@@ -1,2 +1,2 @@
 <?php
-add_theme_support( 'post-thumbnails' );
+show_admin_bar( false );
