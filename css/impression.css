@@ -1,0 +1,13 @@
+header, nav#menu, i, footer{
+    display: none !important;
+}
+
+.mm-wrapper_sidebar-expanded-30:not(.mm-wrapper_sidebar-closed) .mm-slideout {
+    position: inherit !important;
+    top:15px !important;
+    width: 100%;
+    height: 100%;
+    -ms-transform: unset !important;
+    -webkit-transform: unset !important;
+    transform: unset !important;
+}
