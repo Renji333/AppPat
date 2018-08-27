@@ -1,7 +1,7 @@
 <?php if (have_posts()) : ?>
     <?php while (have_posts()) : the_post(); ?>
-        <a href="<?php the_permalink(); ?>">
-            <article id="<?php the_ID(); ?>" class="container-article fiscalite">
+        <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?s=".htmlspecialchars($_GET['s']); } ?>">
+            <article id="<?php the_ID(); ?>" class="container-article <?php echo get_the_category()[0]->cat_name;?>">
                 <h4 class="post-title">
                     <?php the_title(); ?>
                 </h4>

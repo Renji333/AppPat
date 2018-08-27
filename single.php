@@ -5,11 +5,11 @@
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
 
-
-                <article id="currentPost" class="post <?php echo $tags; ?>">
+                <article id="currentPost" class="post <?php echo get_the_category()[0]->cat_name;?>">
 
                     <div class="actionsIcons">
 
+                        <i id="tintBtn" class="fa fa-paint-brush" aria-hidden="true"></i>
                         <i id="printBtn" class="fa fa-print" aria-hidden="true"></i>
                         <?php previous_post_link('%link', '<i class="fa fa-chevron-left" aria-hidden="true"></i>' ); ?>
                         <?php next_post_link( '%link', '<i class="fa fa-chevron-right" aria-hidden="true"></i>' ); ?>
@@ -27,7 +27,6 @@
                     </div>
 
                 </article>
-
 
             <?php endwhile; ?>
         <?php endif; ?>

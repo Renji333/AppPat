@@ -107,10 +107,12 @@ header {
     height: 100%;
     float: right;
     padding: 0 15px 0 15px;
+    width: 20% !important;
 }
 
 .AppSearch .search-form{
     width: 100%;
+    height: 35px;
 }
 
 .AppSearch .input-group {
@@ -240,6 +242,9 @@ footer ul li img{
     -ms-transform: unset !important;
     -webkit-transform: unset !important;
     transform: unset !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
 }
 
 .main-container {

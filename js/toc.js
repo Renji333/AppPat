@@ -18,23 +18,21 @@ $(function() {
             {
                 type		: 'tabs',
                 content		: [
-                    '<a href="#panel-actu"><img src="../img/actualites.svg" width="25"><br /><span>Actualités</span></a>',
-                    '<a href="#panel-fiscalite"><img src="img/fiscalite.svg" width="25"><br /><span>Fiscalité</span></a>',
-                    '<a href="#panel-famille"><img src="img/famille.svg" width="30"><br /><span>Famille et transmission</span></a>',
-                    '<a href="#panel-epargne"><img src="img/epargne.svg" width="25"><br /><span>Épargne et placements</span></a>',
-                    '<a href="#panel-retraite"><img src="img/retraite.svg" width="23"><br /><span>Retraite et prévoyance</span></a>',
-                    '<a href="#panel-credits"><img src="img/credits.svg" width="25"><br /><span>Crédits et assurance</span></a>',
-                    '<a href="#panel-dirigeants"><img src="img/dirigeants.svg" width="22"><br /><span>Dirigeants</span></a>',
-                    '<a href="#panel-dossiers"><img src="img/dossiers.svg" width="25"><br /><span>Dossiers</span></a>',
-                    '<a href="#panel-outils"><img src="img/outils.svg" width="22"><br /><span>Outils</span></a>'
+                    '<a href="#panel-actu"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/actualites.svg" width="25"><span>Actualités</span></a>',
+                    '<a href="#panel-fiscalite"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/fiscalite.svg" width="25"><span>Fiscalité</span></a>',
+                    '<a href="#panel-famille"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/famille.svg" width="30"><span>Famille et transmission</span></a>',
+                    '<a href="#panel-epargne"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img//epargne.svg" width="25"><span>Épargne et placements</span></a>',
+                    '<a href="#panel-retraite"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/retraite.svg" width="23"><span>Retraite et prévoyance</span></a>',
+                    '<a href="#panel-credits"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/credits.svg" width="25"><span>Crédits et assurance</span></a>',
+                    '<a href="#panel-dirigeants"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/dirigeants.svg" width="22"><span>Dirigeants</span></a>',
+                    '<a href="#panel-dossiers"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/dossiers.svg" width="25"><span>Dossiers</span></a>',
+                    '<a href="#panel-outils"><img src="http://localhost:8282/wordpress/wp-content/themes/AppPat/img/outils.svg" width="22"><span>Outils</span></a>'
                 ]
             }
         ]
     });
 
 });
-
-
 
 $(document).ready(function () {
     $('#panel-actu>.mm-navbar>.mm-navbar__title').wrapInner('<span class="icoActualite"></span>');

@@ -91,12 +91,14 @@ nav:not(.mm-menu)
     border-bottom: solid 1px #0268AA;
     height: 39px;
     text-transform: uppercase;
+    line-height: 12px !important;
 }
 
 .mm-navbar a.mm-navbar__title {
     color: #004673 !important;
     font-family: poppinssemibold;
     font-size: 14px;
+    padding-top: 13px !important;
 }
 
 .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
@@ -112,11 +114,10 @@ span.mm-navbar__breadcrumbs {
 }
 
 .mm-navbar_tabs span {
-    margin-left: 8px;
-    margin-right: 8px;
     font-size: 10px;
-    line-height: normal;
     font-family: poppinsregular;
+    display: block;
+    margin-top: 10px;
 }
 
 .mm-panels {
