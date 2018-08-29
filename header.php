@@ -17,7 +17,6 @@
         echo "<link rel='stylesheet' type='text/css' href='".get_stylesheet_directory_uri()."/css/impression.css' media='print'>";
     }?>
 
-
     <?php wp_head(); ?>
 
 </head>
@@ -26,11 +25,11 @@
 
     <header>
 
-        <a class="HeaderBlock AppNameTitle" href="<?php bloginfo('home'); ?>">
+        <a class="HeaderBlock AppNameTitle" href="<?php echo home_url();?>">
             <span><?php bloginfo('name'); ?></span>
         </a>
 
-        <div class="HeaderBlock AppLogout" href="<?php bloginfo('home'); ?>">
+        <div class="HeaderBlock AppLogout">
             <img src="http://citation-celebre.leparisien.fr/images/personnage-fiction/3322.jpg" alt="..." class="UserAvatar"/>
             <span class="UserName">John Doe</span>
             <a href="<?php echo wp_logout_url(); ?>">
