@@ -11,31 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="patritheque.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../patritheque/wp-content/plugins/patritheque/patritheque.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1309">
-              <caret line="108" column="72" lean-forward="false" selection-start-line="108" selection-start-column="8" selection-end-line="108" selection-end-column="78" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="header.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="104" lean-forward="false" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Nlp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../../../patritheque/wp-content/plugins/patritheque/class/recups/Nlp.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1794">
-              <caret line="143" column="0" lean-forward="false" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="114" lean-forward="false" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -101,10 +81,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
-    <option name="height" value="1096" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -193,15 +173,16 @@
       <workItem from="1535368014211" duration="6243000" />
       <workItem from="1535457987877" duration="679000" />
       <workItem from="1535530911466" duration="1968000" />
-      <workItem from="1535542058781" duration="3088000" />
+      <workItem from="1535542058781" duration="3161000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89302000" />
+    <option name="totallyTimeSpent" value="89375000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1119403" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -538,8 +519,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="104" lean-forward="false" selection-start-line="11" selection-start-column="104" selection-end-line="11" selection-end-column="104" />
+        <state relative-caret-position="289">
+          <caret line="17" column="114" lean-forward="false" selection-start-line="17" selection-start-column="114" selection-end-line="17" selection-end-column="114" />
           <folding />
         </state>
       </provider>

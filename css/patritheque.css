@@ -1,0 +1,879 @@
+﻿/* Ajout du header pour les pages rédactionnelles sans le contexte complet */
+.topic-headerFRC {
+    background-color: #315A9C;
+    color: white;
+    width: calc(100%);
+    height: 3em;
+    position: fixed;
+    left: 0;
+    top: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    display: table;
+    box-sizing: border-box;
+}
+.topic-header-shadowFRC {
+    height: 3em;
+    width: 100%;
+}
+.navFRC {
+    width: 100%;
+    display: table-cell;
+}
+.titleFRC {
+    width: 40%;
+    height: 100%;
+    float: left;
+    line-height: 3em;
+    cursor: pointer;
+}
+.titleFRC span, .gotohomeFRC span {
+    padding: 0em 1em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+    font-size: 20px;
+}
+.gotohomeFRC {
+    width: 60%;
+    float: left;
+    text-align: right;
+    height: 100%;
+    line-height: 3em;
+    cursor: pointer;
+}
+
+.gotohomeFRC span{
+	font-size: 16px;
+}
+/* Feuille de styles Patrithèque : ordre des styles :
+	1/ haut de pages :
+		- navigation : fil d'Ariane et sequencage
+		- titre de rubrique => ligne 60
+		
+	2/ milieu de pages (contenu) :
+		- titres H1 à H4 + liens, textes et puces standards => ligne 90
+		- encarts spéciaux et puces d'encarts => ligne 270
+		- tableaux et puces de tableaux => ligne 500
+
+	3/ bas de pages :
+		- encarts "Sources" => ligne 720
+		- copyright
+
+	4/ page d'accueil
+*/
+
+body {
+	font-family:Arial, helvetica, sans-serif;
+	background-color:#ffffff;
+}
+
+/* ------------- "Toujours cacher" : commentaires de rédaction ----------------------- */
+
+span.toujours_cacher {
+	font-size:10.5pt;
+	color:#ff0000;
+	font-weight:bold;
+	background:#FFE4E1;
+}
+@media screen{
+span.toujours_cacher {
+	display:none;
+}
+}
+
+/* ------------- Haut de page : navigation & fil d'Ariane et sequencage  ----------------------- */
+
+p.fil-ariane, a.fil-ariane{
+   text-align:right;
+   font-size:10.5pt;
+   font-weight:normal;
+   font-style:normal;
+   text-decoration:none;
+}
+p.sequencage {
+	margin-left:20.75pt;
+	margin-right:10pt;
+	margin-top:16.00pt;
+	margin-bottom:8.00pt;
+	text-align:left;
+	color:#1a4159;
+	font-size:14.5pt;
+	font-weight:bold;
+}
+
+/* ------------- Haut de page : Titre de rubrique  ----------------------- */
+
+p.titre-rubrique {
+	margin-right:0pt;
+	margin-left:20.75pt;
+	margin-top:10.00pt;
+	margin-bottom:20.00pt;
+	text-align:left;
+	font-weight:bold;
+	background : none !important;
+}
+a.sur-titre-rubrique, a.sous-titre-rubrique, a.sur-titre-rubrique:hover, a.sous-titre-rubrique:hover {
+	margin-top:11pt;
+	margin-right:0pt;
+	margin-bottom:10pt;
+	text-align:left;
+	font-family:Tahoma,sans-serif; /* KHLHVS : ajout sans-serif pour iPad */
+	font-weight:normal;
+	text-decoration:none;
+	background:none!important;
+	color:#efa612!important;  /* KHLHVS : PERSONNALISATION couleur "orange Patrithèque", par défaut : #efa612 */
+}
+a.sur-titre-rubrique, a.sur-titre-rubrique:hover {
+	font-size: 16px!important;
+}
+a.sous-titre-rubrique, a.sous-titre-rubrique:hover {
+	font-size: 30px!important;
+}
+
+
+/* ------------- Milieu de pages : Titres H1 à H4 + liens, textes et puces standards  ----------------------- */
+
+h1, h2, h3, h4 {
+    margin-left:20.75pt;
+    margin-right:10pt;
+    text-align:left;
+    font-weight:normal; 
+    text-decoration:none;
+}
+h1 {
+    margin-top:18.00pt;
+    margin-bottom:8.00pt;
+    color:#315A9C;
+    font-size:19pt;
+}
+h2 {
+    margin-top:12.00pt;
+    margin-bottom:6.00pt;
+    color:#1a4159;
+    font-size:16pt;
+}
+h3 {
+    margin-top:10pt;
+    margin-bottom:3.00pt;
+    color:#315A9C;
+    font-size:14pt;
+}
+h4 {
+    margin-top:8.00pt;
+    margin-bottom:4.00pt;
+    font-size:12pt;
+    color:#1a4159;
+}
+p {
+   margin-left:20.75pt;
+   margin-right:10pt;
+   margin-top:4.00pt;
+   margin-bottom:0.00pt;
+   text-align:left;
+   color:#1a4159;
+   font-size:10.5pt;
+}
+a:link, a:visited, a:hover {
+	text-decoration:none;
+	font-weight:bold;
+}
+a.a_lien_externe:link, a.a_lien_externe:visited, a.a_lien_externe:hover {/* Liens formulaires : dégraissés */
+	text-decoration:none;
+	font-weight:normal;
+}
+a:link, a.a_lien_externe:link {
+	color:#3662AB;        
+}
+a:visited, a.a_lien_externe:visited {
+	color:#154580;
+}
+a:hover, a.a_lien_externe:hover {
+	color:#1a4159;
+}
+
+body>p.puce {/* utile ?? */
+	margin-left:35.05pt;
+	margin-right:10pt;
+	margin-top:4.00pt;
+	margin-bottom:0.00pt;
+	text-indent:-3.5pt;
+	text-align:left;
+	font-size:10.5pt;
+}
+p.puce, p.Puce, ol {
+        margin-left:28.05pt;
+        margin-right:10pt;
+        margin-top:4.00pt;
+        margin-bottom:0.00pt;
+        text-indent:0pt;
+        text-align:left;
+        font-size:10.5pt;
+        padding-left:15px;
+}
+p.puce, p.Puce {
+        list-style-type:none;
+        background-image:url("../images/puce.gif");
+        background-repeat:no-repeat;
+        background-position:0px 2.6px;
+}
+ol {
+        color:#1a4159;
+}
+p.paragraphe-puce {
+	 margin-left:39.05pt;
+	 margin-right:10pt;
+	 margin-top:4.00pt;
+	 margin-bottom:1pt;
+	 text-align:left;
+	 font-size:10.5pt;
+}
+p.puce-tiret, p.puce-suite {
+	 margin-right:10pt;
+	 margin-top:4.00pt;
+	 margin-bottom:1pt;
+	 text-indent:0pt;
+	 text-align:left;
+	 font-size:10.5pt;
+	 list-style-type:none;
+	 background-image:url("../images/puce3.gif");
+	 background-repeat:no-repeat;
+	 background-position:0px 7px;
+	 padding-left:15px;
+}
+
+p.puce-tiret {
+	 margin-left:28.05pt;
+}
+
+p.puce-suite {
+	 margin-left:46pt;
+}
+p.paragraphe-puce-suite {
+	margin-left:57.00pt;
+	margin-right:10pt;
+	margin-top:4.00pt;
+	margin-bottom:1pt;
+	text-align:left;
+	font-size:10.5pt;
+}
+
+@media screen{
+	p.puce, p.puce-tiret, p.puce-suite {
+        list-style-type:none;
+        background-repeat:no-repeat;
+        padding-left:15px;
+		}
+	p.puce {
+        margin-left:28.05pt;
+        background-image:url("../images/puce.gif");
+        background-position:0px 2.6px;
+		}
+	p.puce-tiret {
+        margin-left:28.05pt;
+        background-image:url("../images/puce3.gif");
+        background-position:0px 7px;
+		}
+	p.puce-suite {
+        margin-left:46pt;
+        background-image:url("../images/puce3.gif");
+        background-position:0px 7px;
+		}
+}
+@media print{
+   
+   /* FCH PRINT : je supprime le surlignage lors de l'impression */
+   font{
+      color: inherit !important;
+      background: inherit !important;
+   }
+   
+	p.puce, p.puce-tiret, p.puce-suite {
+        display: list-item;
+        list-style-position: outside;	/* KHL : conserve alignement vertical du paragraphe */
+        }
+	p.puce {
+        margin-left:33.05pt;
+        list-style-image: url("../images/puce.gif");
+        }
+	p.puce-tiret {
+        margin-left:33.05pt;
+        list-style-image: url("../images/puce3.gif");
+        }
+	p.puce-suite {
+        margin-left:51pt;
+        list-style-image: url("../images/puce3.gif");
+        }
+}
+
+span.exposant {
+	vertical-align:22%;
+	font-size:7pt;
+}
+p.reload_anim {
+	color:#3662AB;
+	font-style:italic;
+	font-size:10pt;
+}
+
+/* ------------- Milieu de pages : Encarts spéciaux et puces d'encarts  ----------------------- */
+
+#cadre-resume {
+	text-align:left;
+	font-size:11pt;
+	color:#003366;
+	margin-right:30px;
+	margin-left:30px;
+	margin-top:8px;
+	margin-bottom:8px;
+	border-style:none;
+	border:2px solid #5380C9;
+}
+#cadre-resume legend {
+	padding-left:10px;
+	padding-right:10px;
+	text-align:left;
+	font-size:14pt;
+	color:#5380C9;
+	font-weight:bold;
+	background-image:url("../images/encart_resume.png");
+	background-repeat:no-repeat;
+	background-position:10px -2px;
+}
+p.resume {
+          margin-left:12pt;
+          margin-right:12pt;
+          margin-top:4.00pt;
+          margin-bottom:8pt;
+          text-align:left;
+          font-size:10.5pt;
+          color:#1a4159;
+}
+
+p.encart-nouv, p.encart-vert-titre, p.encarts, p.references {
+	margin-right:10pt;
+	margin-top:12.00pt;
+	margin-bottom:3.00pt;
+	text-align:left;
+	font-size:12.5pt;
+	font-weight:bold;
+}
+p.encarts {/* KHL 2017-4 : Titre commun à encarts "Note" + "Attention" */
+	margin-left:20.75pt; /* Au lieu de 20.75, donc + 25 */
+	color:#1a4159;
+}
+p.encart-nouv {/* Titre encarts Nouveau */
+	margin-left:20.75pt;
+	color:#800080;
+}
+p.encart-vert-titre {/* Titre encarts Exemple + Cas particulier */
+	margin-left:45.75pt;
+	color:#817D0E;
+}
+p.references {/* Titre encarts PSP */
+	margin-left:20.75pt;
+	color:#003366;
+}
+
+p.suite-nouv {
+	margin-left:20.75pt;
+	margin-right:10pt;
+	margin-top:4.00pt;
+	margin-bottom:1pt;
+	text-align:left;
+	font-size:10.5pt;
+	color:#800080;
+}
+
+p.tableau-important, p.tableau-note {/* Encarts avec liseret à gauche */
+	margin-top:4.00pt;
+	text-align:left;
+	border-left:solid #5380C9;
+	border-left-width:3px;
+}
+p.tableau-important {
+	margin-left:20.75pt;
+	margin-right:10pt;
+	margin-bottom:6.00pt;
+	color:#1a4159;
+	font-weight:bold;
+	padding-left:5pt;
+	font-size:10.5pt;
+}
+p.tableau-note {/* Encarts Note : texte */
+	margin-left:45.75pt;
+	margin-right:45pt;
+	margin-bottom:10.00pt;
+	padding-left:10px;
+	font-size:9.5pt;
+}
+
+p.encart-vert-sous-titre, p.encart-vert-normal {/* Encarts "Exemple" et "Cas particulier"  */
+	margin-left:45.75pt;
+	margin-top:4.00pt;
+	margin-right:45pt;
+	text-align:left;
+	color:#817D0E;
+}
+p.encart-vert-sous-titre {
+	margin-bottom:1pt;
+	font-size:12pt;
+	font-weight:bold;
+	font-style:italic;
+}
+p.encart-vert-normal {
+	margin-bottom:0.00pt;
+	font-size:10.5pt;
+}
+p.puce-nouveaute, p.encart-vert-puce {
+        margin-right:45pt;
+        margin-top:4.00pt;
+        margin-bottom:0.00pt;
+        text-indent:0pt;
+        text-align:left;
+        font-size:10.5pt;
+        padding-left:15px;
+}
+p.puce-nouveaute {
+    margin-left:28.05pt;	
+	margin-bottom:1pt;
+	color:#800080;
+	list-style-type:none;
+	background-image:url("../images/puce6.gif");
+	background-repeat:no-repeat;
+	background-position:0px 5px;
+}
+p.encart-vert-puce {
+     margin-left:53.05pt;
+	  margin-bottom:1pt;
+	  color:#817D0E;
+	  list-style-type:none;
+	  background-image:url("../images/puce5.gif");
+	  background-repeat:no-repeat;
+	  background-position:0px 3.50px;
+}
+p.paragraphe-nouveaute, p.encart-vert-puce-paragraphe {
+	margin-top:4.00pt;
+	margin-bottom:1pt;
+	text-align:left;
+	font-size:10.5pt;
+}
+p.paragraphe-nouveaute {
+	margin-left:39.05pt;
+	margin-right:10pt;
+	color:purple;
+}
+p.encart-vert-puce-paragraphe {
+	margin-left:64.05pt;
+	margin-right:45pt;
+	color:#817D0E;
+}
+p.encart-vert-puce-suite {
+	  margin-left:75.05pt;
+	  margin-right:45pt;
+	  margin-top:4.00pt;
+	  margin-bottom:1pt;
+	  text-indent:0;
+	  text-align:left;
+	  font-size:10.5pt;
+	  color:#817D0E;
+	  list-style-type:none;
+	  background-image:url("../images/puce7.gif");
+	  background-repeat:no-repeat;
+	  background-position:0px 6px;
+	  padding-left:10px;
+}
+
+body>p.encart-vert-puce-suite {
+	       margin-left:93.05pt;
+	       margin-right:45pt;
+	       margin-top:4.00pt;
+	       margin-bottom:1pt;
+	       text-indent:-4pt;
+	       text-align:left;
+	       font-size:10.5pt;
+	       color:#817D0E;
+}
+
+@media screen{
+	p.puce-nouveaute, p.encart-vert-puce {
+        list-style-type:none;
+        background-repeat:no-repeat;
+        padding-left:15px;
+		}
+	p.puce-nouveaute {
+       margin-left:28.05pt;
+       background-image:url("../images/puce6.gif");
+        background-position:0px 5px;
+		}
+	p.encart-vert-puce {
+        margin-left:53.05pt;
+        background-image:url("../images/puce5.gif");
+        background-position:0px 3.50px;
+		}
+	p.encart-vert-puce-suite {
+        margin-left:75.05pt;
+        list-style-type:none;
+        background-image:url("../images/puce7.gif");
+        background-repeat:no-repeat;
+        background-position:0px 6px;
+        padding-left:10px;
+		}
+}
+@media print{
+	p.puce-nouveaute, p.encart-vert-puce {
+        display: list-item;
+        list-style-position: outside;
+        }
+	p.puce-nouveaute {
+        margin-left:33.05pt;
+        list-style-image: url("../images/puce6.gif");
+        }
+	p.encart-vert-puce {
+        margin-left:58.05pt;
+        list-style-image: url("../images/puce5.gif");
+        }
+	p.encart-vert-puce-suite {
+        margin-left:80.05pt;
+        display: list-item;
+        list-style-image: url("../images/puce7.gif");
+        list-style-position: outside;
+        }
+}
+
+
+/* ------------- Milieu de pages : Tableaux et puces de tableaux  ----------------------- */
+
+table {
+       margin-top:9.00pt;
+       margin-left:0.00em;
+}
+p.tableau-titre, p.tableau-normal {
+	margin-left:3pt;
+	margin-top:3pt;
+	margin-bottom:3pt;
+	margin-right:3pt;
+	text-align:left;
+	font-size:10.5pt;
+}
+p.tableau-titre {
+	font-weight:bold;
+}
+
+p.tableau-normal {
+	 margin-right:3pt;
+	 color:#1a4159;
+}
+p.tableau-puce { /* KHL 2017-4 niveau 1 */
+	text-indent:0pt;
+	margin-left:7.00pt;
+	margin-top:3pt;
+	margin-bottom:3pt;
+	margin-right:3pt;
+	text-align:left;
+	font-size:10.5pt;
+	list-style-type:none;
+	background-image:url("../images/puce.gif");
+	background-repeat:no-repeat;
+	background-position:0px 2.5px;
+	padding-left:15px;
+}
+td>p.tableau-puce { /* KHL ??? */
+	  margin-left:7.00pt;
+}
+p.tableau-puce-tiret, p.tableau-puce-suite {  /* KHL 2017-4 niveau 2 et niveau 3 !!! */
+	text-indent:0pt;
+	margin-left:20pt;
+	margin-top:3pt;
+	margin-bottom:3pt;
+	margin-right:3pt;
+	text-align:left;
+	font-size:10.5pt;
+	list-style-type:none;
+	background-image:url("../images/puce3.gif");
+	background-repeat:no-repeat;
+	background-position:0px 8px;
+	padding-left:10px;
+}
+
+td>p.tableau-puce-tiret, td p.tableau-puce-tiret {
+	margin-left:20pt;
+}
+td p.tableau-puce-tiret {
+	margin-left:20pt;
+	margin-top:3pt;
+	margin-bottom:3pt;
+	margin-right:3pt;
+	text-indent:2pt;
+	text-align:left;
+	text-indent:0pt;
+	font-size:10.5pt;
+}
+
+td>p.tableau-puce-suite, td p.tableau-puce-suite {
+	margin-left:34.00pt;
+}
+p.tableau-vert {
+	margin-right: 6.50pt;
+	margin-top: 5.00pt;
+	margin-bottom: 5.00pt;
+	text-align: left;
+	font-size: 10.5pt;
+	color:#817D0E;	
+}
+
+p.tableau-vert-titre, p.tableau-vert-normal, p.tableau-vert-puce, p.tableau-vert-puce-suite {
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-size:10.5pt;
+	color:#817D0E;
+}
+p.tableau-vert-titre {
+	margin-left:0pt;
+	font-weight:bold;
+}
+p.tableau-vert-normal {
+	margin-left:0pt;
+	margin-right:0pt;
+}
+p.tableau-vert-puce, p.tableau-vert-puce-suite, p.tableau-vert-puce-tiret {
+	text-indent:0pt;
+	margin-right:0pt;
+	list-style-type:none;
+	background-repeat:no-repeat;
+	color:#817D0E;
+}
+td>p.tableau-vert-puce {
+	margin-left:6.00pt;
+}
+p.tableau-vert-puce {
+	margin-left:4.00pt;
+	background-image:url("../images/puce5.gif");
+	background-position:0px 2.5px;
+	padding-left:15px;
+}
+td>p.tableau-vert-puce-tiret {
+	margin-left:15.00pt;
+}
+td p.tableau-vert-puce-tiret {
+	margin-left:15.00pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-indent:2pt;
+	text-align:left;
+	text-indent:0pt;
+	font-size:10.5pt;
+}
+p.tableau-vert-puce-tiret {
+	margin-left:12.00pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-size:10.5pt;
+	background-image:url("../images/puce3.gif");
+	background-position:0px 8px;
+	padding-left:10px;
+}
+p.tableau-vert-puce-suite {
+	margin-left:12.00pt;
+	background-image:url("../images/puce3.gif");
+	background-position:0px 8px;
+	padding-left:10px;
+}
+td>p.tableau-vert-puce-suite, td p.tableau-vert-puce-suite {
+	margin-left:34.00pt;
+}
+
+@media screen{
+	p.tableau-vert-puce {
+        margin-left:4pt;
+        list-style-type:none;
+        background-image:url("../images/puce5.gif");
+        background-repeat:no-repeat;
+        background-position:0px 2.5px;
+        padding-left:15px;
+		}
+	p.tableau-vert-puce-tiret {
+        margin-left:12pt;
+        list-style-type:none;
+        background-image:url("../images/puce3.gif");
+        background-repeat:no-repeat;
+        background-position:0px 8px;
+        padding-left:10px;
+		}
+	p.tableau-vert-puce-suite {
+        margin-left:12pt;
+        list-style-type:none;
+        background-image:url("../images/puce3.gif");
+        background-repeat:no-repeat;
+        background-position:0px 8px;
+        padding-left:10px;
+		}
+}
+@media print{
+	p.tableau-vert-puce, p.tableau-vert-puce-tiret, p.tableau-vert-puce-suite {
+        display: list-item;
+        list-style-position: outside;
+        }
+	p.tableau-vert-puce {
+        margin-left:9pt;
+        list-style-image: url("../images/puce5.gif");
+        }
+	p.tableau-vert-puce-tiret, p.tableau-vert-puce-suite {
+        margin-left:17pt;
+        list-style-image: url("../images/puce3.gif");
+        }
+}
+@media (max-width:630px){
+table {
+       margin-left:0px !important;
+}
+}
+
+@media screen{
+	p.tableau-puce {
+        margin-left:4pt;
+        list-style-type:none;
+        background-image:url("../images/puce.gif");
+        background-repeat:no-repeat;
+        background-position:0px 2.5px;
+        padding-left:15px;
+		}
+	p.tableau-puce-tiret, p.tableau-puce-suite {
+        margin-left:12pt;
+        list-style-type:none;
+        background-image:url("../images/puce3.gif");
+        background-repeat:no-repeat;
+        background-position:0px 8px;
+        padding-left:10px;
+		}
+}
+@media print{
+	p.tableau-puce {
+        margin-left:20pt;
+        display: list-item;
+        list-style-image: url("../images/puce.gif");
+        list-style-position: outside;
+        }
+	p.tableau-puce-tiret, p.tableau-puce-suite {
+        margin-left:17pt;
+        display: list-item;
+        list-style-image: url("../images/puce3.gif");
+        list-style-position: outside;
+        }
+}
+
+/* --------------- Bas de pages : Sources ---------------- */
+
+p.para-sources {
+	margin-left:20.75pt;
+	margin-right:6.50pt;
+	margin-top:12.00pt;
+	margin-bottom:0.00pt;
+	text-align:left;
+	font-size:14pt;
+	color:#003366;
+	font-weight:bold;
+	font-style:italic;
+}
+
+hr.sources-liseret {
+	margin-left:20.75pt;
+	margin-top:2.00pt;
+	margin-bottom:5.00pt;
+		margin-right:15pt;
+		height:3px; 
+		color:#5380C9; 
+		background-color:#5380C9;
+		border:none; 
+     }
+	 
+p.normal-sources, p.normal-sources-web, p.normal-formulaires-web {
+	margin-right:6.50pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	font-size:10pt;
+	font-weight:normal;
+	text-decoration:none;
+	color:#1a4159;
+	margin-left:25pt;
+	padding-left:15px;
+}
+p.normal-sources-web, p.normal-formulaires-web {
+	  list-style-type: none;
+	  background-image: url("../images/source.gif");
+	  background-repeat: no-repeat;
+	  background-position:left;
+	  text-indent: 0pt;
+}
+p.normal-sources-web {
+	  background-image: url("../images/source.gif");
+}
+p.normal-formulaires-web {
+	  background-image: url("../images/source2.gif");
+} 
+
+a.normal-sources, a.normal-sources-web, a.normal-formulaires-web  {
+      margin-top:0pt;
+	  margin-right: 6.50pt;
+      margin-bottom:0pt;
+      text-align:left;
+      font-size:10pt;
+      font-weight:normal;
+	  text-decoration: none;
+      color:#3662AB;      
+} 
+a.normal-sources-web:visited, a.normal-formulaires-web:visited {
+	color: #154580;
+}
+a.normal-sources-web:hover, a.normal-formulaires-web:hover {
+	color: #1a4159;
+}
+a.normal-sources:hover {
+	text-decoration:none;
+}
+
+/* ------------- Bas de pages : Copyright  ----------------------- */
+
+
+p.footer_ {
+	margin-left:20.75pt;
+	margin-right:10pt;
+	margin-top:4.00pt;
+	margin-bottom:1pt;
+	text-align:left;
+	font-size:11pt;
+}
+#footer_ {
+          line-height:10.00pt;
+          margin-left:0pt;
+          margin-right:0.0pt;
+          margin-top:0.0pt;
+          text-align:left;
+          margin-bottom:0.00pt;
+}
+p.copyright {
+	  margin-left:20.75pt;
+	  margin-right:0.0pt;
+	  margin-top:0.0pt;
+	  text-align:left;
+	  margin-bottom:1.00pt;
+	  font-size:10.50pt;
+	  text-decoration:none;
+	  font-weight:normal;
+	  color:#6992AF;
+}
+a.copyright_2:link, a.copyright_2:hover, a.copyright_2:visited {
+	margin-right:6.50pt;
+	margin-top:0pt;
+	margin-bottom:0pt;
+	text-align:left;
+	text-decoration:none;
+	font-weight:normal;
+	color:#6992AF;
+}
+
+/* ------------- Page d'accueil : KHL 11/02/17 - styles transférés dans la page d'accueil ----------------------- */
+

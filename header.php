@@ -15,6 +15,7 @@
 
     <?php if(is_single() && 'post' == get_post_type()) {
         echo "<link rel='stylesheet' type='text/css' href='".get_stylesheet_directory_uri()."/css/impression.css' media='print'>";
+        echo "<link rel='stylesheet' type='text/css' href='".get_stylesheet_directory_uri()."/css/patritheque.css'>";
     }?>
 
     <?php wp_head(); ?>
