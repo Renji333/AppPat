@@ -1,5 +1,8 @@
 $(function() {
     $('nav#menu').mmenu({
+        lazySubmenus: {
+            load : true,
+        },
         setSelected	: true,
         counters	: true,
         sidebar		: {
