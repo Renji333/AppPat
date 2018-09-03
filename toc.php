@@ -17,8 +17,7 @@
     <?php
 
         global $wpdb;
-        $results = $wpdb->get_results("SELECT * FROM {$wpdb->prefix}tocs WHERE aides = 'integrale' ");
-        echo $results[0]->content;
+        echo $wpdb->get_results("SELECT * FROM {$wpdb->prefix}tocs WHERE aides = 'integrale' ")[0]->content;
 
         ?>
 
