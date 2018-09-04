@@ -10,7 +10,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     display: block;
 }
 
-a{
+a:link, a:visited, a:hover {
     text-decoration: none !important;
 }
 
@@ -168,7 +168,8 @@ header {
     cursor: pointer;
     border: 1px solid #ccc;
     white-space: nowrap;
-    line-height: 1.42857143;
+    line-height: 22px;
+    height: 35px;
     border-radius: 0 4px 4px 0;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -183,12 +184,11 @@ header {
 /* Toc */
 
 .mm-wrapper_sidebar-expanded-30 .mm-menu_sidebar-expanded {
-    width: 20% !important;
+    width: 30% !important;
 }
 
 [class*="mm-wrapper_sidebar-expanded-"] .mm-menu_sidebar-expanded.toc{
     height: calc(100% - 70px);
-    width: 350px;
     top: 70px !important;
     position: fixed;
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#eaeaf0+0,dddde6+100 */
@@ -208,7 +208,7 @@ footer{
     position: fixed;
     bottom: 0;
     right: 0;
-    width: calc(100% - 20%);
+    width: calc(100% - 30%);
 }
 
 footer ul{
@@ -235,7 +235,7 @@ footer ul li img{
 /* Main-Container */
 
 .mm-wrapper_sidebar-expanded-30:not(.mm-wrapper_sidebar-closed) .mm-slideout {
-    width: 80% ;
+    width: 70%;
 }
 
 .mm-wrapper_sidebar-expanded-30:not(.mm-wrapper_sidebar-closed) .mm-slideout {
@@ -292,9 +292,6 @@ article.container-article::before {
     background-size: cover;
 }
 
-article.fiscalite.container-article::before {
-    background-image: url("https://is1-ssl.mzstatic.com/image/thumb/Purple118/v4/b1/f1/12/b1f112d0-3445-fbe9-3c66-af001a80b727/mzl.kzkjtkaq.png/246x0w.jpg");
-}
 
 article.container-article h4 {
     font-size: 16px;
@@ -376,19 +373,52 @@ article.post{
     position: relative;
 }
 
-article.post::before {
+article.post::before, article.container-article::before {
     content: '';
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     position: absolute;
-    left: 10px;
-    top: 10px;
+    left: 16px;
+    top: 25px;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
 }
 
-article.post.fiscalite::before {
-    background-image: url("https://imgc.allpostersimages.com/img/print/affiches/batman-logo_a-G-8646921-0.jpg");
+article.container-article::before {
+    top: 15px;
+}
+
+
+article.post.fiscalite::before, article.fiscalite.container-article::before {
+    background-image: url("../img/fiscalite.svg");
+}
+
+article.post.famille::before, article.famille.container-article::before {
+    background-image: url("../img/famille.svg");
+}
+
+article.post.epargne::before, article.epargne.container-article::before {
+    background-image: url("../img/epargne.svg");
+}
+
+article.post.retraite::before, article.retraite.container-article::before {
+    background-image: url("../img/retraite.svg");
+}
+
+article.post.credits::before, article.credits.container-article::before {
+    background-image: url("../img/credits.svg");
+}
+
+article.post.dirigeants::before, article.dirigeants.container-article::before {
+    background-image: url("../img/dirigeants.svg");
+}
+
+article.post.dossiers::before, article.dossiers.container-article::before {
+    background-image: url("../img/dossiers.svg");
+}
+
+article.post.outils::before, article.outils.container-article::before {
+    background-image: url("../img/outils.svg");
 }
 
 /* Post Icons Header Design */

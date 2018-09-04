@@ -1,72 +1,16 @@
-﻿/* Ajout du header pour les pages rédactionnelles sans le contexte complet */
-.topic-headerFRC {
-    background-color: #315A9C;
-    color: white;
-    width: calc(100%);
-    height: 3em;
-    position: fixed;
-    left: 0;
-    top: 0;
-    font-family: "Trebuchet MS", Arial, sans-serif;
-    display: table;
-    box-sizing: border-box;
-}
-.topic-header-shadowFRC {
-    height: 3em;
-    width: 100%;
-}
-.navFRC {
-    width: 100%;
-    display: table-cell;
-}
-.titleFRC {
-    width: 40%;
-    height: 100%;
-    float: left;
-    line-height: 3em;
-    cursor: pointer;
-}
-.titleFRC span, .gotohomeFRC span {
-    padding: 0em 1em;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: block;
-    font-size: 20px;
-}
-.gotohomeFRC {
-    width: 60%;
-    float: left;
-    text-align: right;
-    height: 100%;
-    line-height: 3em;
-    cursor: pointer;
-}
-
-.gotohomeFRC span{
-	font-size: 16px;
-}
-/* Feuille de styles Patrithèque : ordre des styles :
-	1/ haut de pages :
-		- navigation : fil d'Ariane et sequencage
-		- titre de rubrique => ligne 60
-		
-	2/ milieu de pages (contenu) :
-		- titres H1 à H4 + liens, textes et puces standards => ligne 90
-		- encarts spéciaux et puces d'encarts => ligne 270
-		- tableaux et puces de tableaux => ligne 500
-
-	3/ bas de pages :
-		- encarts "Sources" => ligne 720
-		- copyright
-
-	4/ page d'accueil
-*/
-
-body {
+﻿body {
 	font-family:Arial, helvetica, sans-serif;
 	background-color:#ffffff;
 }
+
+.post-content {
+	margin-top: 30px;
+}
+
+/*.post-content p {
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}*/
 
 /* ------------- "Toujours cacher" : commentaires de rédaction ----------------------- */
 
@@ -76,67 +20,23 @@ span.toujours_cacher {
 	font-weight:bold;
 	background:#FFE4E1;
 }
+
 @media screen{
-span.toujours_cacher {
-	display:none;
-}
-}
-
-/* ------------- Haut de page : navigation & fil d'Ariane et sequencage  ----------------------- */
-
-p.fil-ariane, a.fil-ariane{
-   text-align:right;
-   font-size:10.5pt;
-   font-weight:normal;
-   font-style:normal;
-   text-decoration:none;
-}
-p.sequencage {
-	margin-left:20.75pt;
-	margin-right:10pt;
-	margin-top:16.00pt;
-	margin-bottom:8.00pt;
-	text-align:left;
-	color:#1a4159;
-	font-size:14.5pt;
-	font-weight:bold;
+	span.toujours_cacher {
+		display:none;
+	}
 }
 
 /* ------------- Haut de page : Titre de rubrique  ----------------------- */
 
 p.titre-rubrique {
-	margin-right:0pt;
-	margin-left:20.75pt;
-	margin-top:10.00pt;
-	margin-bottom:20.00pt;
-	text-align:left;
-	font-weight:bold;
-	background : none !important;
-}
-a.sur-titre-rubrique, a.sous-titre-rubrique, a.sur-titre-rubrique:hover, a.sous-titre-rubrique:hover {
-	margin-top:11pt;
-	margin-right:0pt;
-	margin-bottom:10pt;
-	text-align:left;
-	font-family:Tahoma,sans-serif; /* KHLHVS : ajout sans-serif pour iPad */
-	font-weight:normal;
-	text-decoration:none;
-	background:none!important;
-	color:#efa612!important;  /* KHLHVS : PERSONNALISATION couleur "orange Patrithèque", par défaut : #efa612 */
-}
-a.sur-titre-rubrique, a.sur-titre-rubrique:hover {
-	font-size: 16px!important;
-}
-a.sous-titre-rubrique, a.sous-titre-rubrique:hover {
-	font-size: 30px!important;
+	display: none;
 }
 
 
 /* ------------- Milieu de pages : Titres H1 à H4 + liens, textes et puces standards  ----------------------- */
 
 h1, h2, h3, h4 {
-    margin-left:20.75pt;
-    margin-right:10pt;
     text-align:left;
     font-weight:normal; 
     text-decoration:none;
@@ -166,18 +66,13 @@ h4 {
     color:#1a4159;
 }
 p {
-   margin-left:20.75pt;
-   margin-right:10pt;
    margin-top:4.00pt;
    margin-bottom:0.00pt;
    text-align:left;
    color:#1a4159;
    font-size:10.5pt;
 }
-a:link, a:visited, a:hover {
-	text-decoration:none;
-	font-weight:bold;
-}
+
 a.a_lien_externe:link, a.a_lien_externe:visited, a.a_lien_externe:hover {/* Liens formulaires : dégraissés */
 	text-decoration:none;
 	font-weight:normal;
@@ -319,26 +214,24 @@ p.reload_anim {
 /* ------------- Milieu de pages : Encarts spéciaux et puces d'encarts  ----------------------- */
 
 #cadre-resume {
-	text-align:left;
-	font-size:11pt;
-	color:#003366;
-	margin-right:30px;
-	margin-left:30px;
-	margin-top:8px;
-	margin-bottom:8px;
-	border-style:none;
-	border:2px solid #5380C9;
+    text-align: left;
+    font-size: 11pt;
+    color: #003366;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 2px solid #5380C9;
+    border-radius: 6px;
 }
 #cadre-resume legend {
-	padding-left:10px;
-	padding-right:10px;
-	text-align:left;
-	font-size:14pt;
-	color:#5380C9;
-	font-weight:bold;
-	background-image:url("../images/encart_resume.png");
-	background-repeat:no-repeat;
-	background-position:10px -2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    font-size: 14pt;
+    color: #5380C9;
+    font-weight: bold;
+    background-image: url(../img/encart_resume.svg);
+    background-repeat: no-repeat;
+    background-position: 10px 0;
 }
 p.resume {
           margin-left:12pt;
@@ -376,8 +269,6 @@ p.references {/* Titre encarts PSP */
 }
 
 p.suite-nouv {
-	margin-left:20.75pt;
-	margin-right:10pt;
 	margin-top:4.00pt;
 	margin-bottom:1pt;
 	text-align:left;
@@ -392,8 +283,6 @@ p.tableau-important, p.tableau-note {/* Encarts avec liseret à gauche */
 	border-left-width:3px;
 }
 p.tableau-important {
-	margin-left:20.75pt;
-	margin-right:10pt;
 	margin-bottom:6.00pt;
 	color:#1a4159;
 	font-weight:bold;
@@ -839,8 +728,6 @@ a.normal-sources:hover {
 
 
 p.footer_ {
-	margin-left:20.75pt;
-	margin-right:10pt;
 	margin-top:4.00pt;
 	margin-bottom:1pt;
 	text-align:left;

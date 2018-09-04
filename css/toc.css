@@ -98,7 +98,7 @@ nav:not(.mm-menu)
     color: #004673 !important;
     font-family: poppinssemibold;
     font-size: 14px;
-    padding-top: 13px !important;
+    padding-top: 16px !important;
 }
 
 .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
@@ -141,6 +141,11 @@ li.mm-listitem {
     font-size: 14px;
 }
 
+.mm-listitem>a, .mm-listitem>span {
+    text-overflow: initial;
+    white-space: normal;
+}
+
 .mm-menu .mm-listview .mm-btn_next:before, .mm-menu .mm-listview .mm-btn_next:after {
     border-color: #333333;
 }
@@ -169,7 +174,7 @@ li.mm-listitem {
     height: 8px;
     border-radius: 8px;
     border: solid 2px #3CB8B7;
-    top: 50%;
+    top: 23px;
     margin-top: -6px;
     left: 25px;
 }
