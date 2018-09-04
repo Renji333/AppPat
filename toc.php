@@ -6,9 +6,8 @@
             <li><a href="#/">Toute l'actualité</a></li>
             <li><a href="#/">Fiscalité</a></li>
             <li><a href="#/">Famille et transmission</a></li>
-            <li><a href="#/">Épargne et placements</a></li>
+            <li><a href="#/">Placements</a></li>
             <li><a href="#/">Retraite prévoyance</a></li>
-            <li><a href="#/">Crédits et assurance</a></li>
             <li><a href="#/">Dirigeants</a></li>
         </ul>
     </div>

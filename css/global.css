@@ -251,7 +251,7 @@ footer ul li img{
     position: fixed;
     top: 70px;
     overflow: auto;
-    width: 80%;
+    width: 70%;
     height: calc(100% - (70px + 40px));
     min-height: 0 !important;
     margin-right: auto;
@@ -397,24 +397,20 @@ article.post.famille::before, article.famille.container-article::before {
     background-image: url("../img/famille.svg");
 }
 
-article.post.epargne::before, article.epargne.container-article::before {
-    background-image: url("../img/epargne.svg");
+article.post.epargne::before, article.placements.container-article::before {
+    background-image: url("../img/placements.svg");
 }
 
 article.post.retraite::before, article.retraite.container-article::before {
     background-image: url("../img/retraite.svg");
 }
 
-article.post.credits::before, article.credits.container-article::before {
-    background-image: url("../img/credits.svg");
-}
-
 article.post.dirigeants::before, article.dirigeants.container-article::before {
     background-image: url("../img/dirigeants.svg");
 }
 
-article.post.dossiers::before, article.dossiers.container-article::before {
-    background-image: url("../img/dossiers.svg");
+article.post.immobilier::before, article.immobilier.container-article::before {
+    background-image: url("../img/immobilier.svg");
 }
 
 article.post.outils::before, article.outils.container-article::before {
@@ -448,13 +444,17 @@ article.post a{
 
 article.post h1, article.post h2, article.post h3, article.post h4, article.post h5, article.post h6 {
     margin-bottom: 0px;
-    margin-top: 10px;
+    margin-top: 30px;
     font-family: poppinsbold;
     color: #024D7E;
 }
 
-article.post h1 {
+h1.post-title:first-of-type {
     font-size: 22px;
+}
+
+article.post h1 {
+    font-size: 18px;
 }
 
 article.post h2 {
@@ -482,4 +482,8 @@ article.post li::before {
     display: inline-block;
     content: "";
     background-color: #1FCCC4 !important;
+}
+
+p.post-info {
+    margin: 0
 }

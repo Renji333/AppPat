@@ -42,35 +42,35 @@ h1, h2, h3, h4 {
     text-decoration:none;
 }
 h1 {
-    margin-top:18.00pt;
     margin-bottom:8.00pt;
     color:#315A9C;
     font-size:19pt;
 }
 h2 {
-    margin-top:12.00pt;
     margin-bottom:6.00pt;
     color:#1a4159;
     font-size:16pt;
 }
 h3 {
-    margin-top:10pt;
     margin-bottom:3.00pt;
     color:#315A9C;
     font-size:14pt;
 }
 h4 {
-    margin-top:8.00pt;
     margin-bottom:4.00pt;
     font-size:12pt;
     color:#1a4159;
 }
 p {
-   margin-top:4.00pt;
-   margin-bottom:0.00pt;
+   margin-top: 20px;
+   margin-bottom:0;
    text-align:left;
    color:#1a4159;
    font-size:10.5pt;
+}
+
+h1+p, h2+p, h3+p, h4+p, h5+p, h6+p {
+    margin-top: 0;
 }
 
 a.a_lien_externe:link, a.a_lien_externe:visited, a.a_lien_externe:hover {/* Liens formulaires : dégraissés */
@@ -91,7 +91,7 @@ body>p.puce {/* utile ?? */
 	margin-left:35.05pt;
 	margin-right:10pt;
 	margin-top:4.00pt;
-	margin-bottom:0.00pt;
+	margin-bottom:0;
 	text-indent:-3.5pt;
 	text-align:left;
 	font-size:10.5pt;
@@ -100,7 +100,7 @@ p.puce, p.Puce, ol {
         margin-left:28.05pt;
         margin-right:10pt;
         margin-top:4.00pt;
-        margin-bottom:0.00pt;
+        margin-bottom:0;
         text-indent:0pt;
         text-align:left;
         font-size:10.5pt;
@@ -264,8 +264,13 @@ p.encart-vert-titre {/* Titre encarts Exemple + Cas particulier */
 	color:#817D0E;
 }
 p.references {/* Titre encarts PSP */
-	margin-left:20.75pt;
+	margin-left: 0;
 	color:#003366;
+}
+
+p.references img {
+    width: 11px !important;
+    height: 10px;
 }
 
 p.suite-nouv {
@@ -292,7 +297,7 @@ p.tableau-important {
 p.tableau-note {/* Encarts Note : texte */
 	margin-left:45.75pt;
 	margin-right:45pt;
-	margin-bottom:10.00pt;
+	margin-bottom:10;
 	padding-left:10px;
 	font-size:9.5pt;
 }
@@ -311,13 +316,13 @@ p.encart-vert-sous-titre {
 	font-style:italic;
 }
 p.encart-vert-normal {
-	margin-bottom:0.00pt;
+	margin-bottom:0;
 	font-size:10.5pt;
 }
 p.puce-nouveaute, p.encart-vert-puce {
         margin-right:45pt;
         margin-top:4.00pt;
-        margin-bottom:0.00pt;
+        margin-bottom:0;
         text-indent:0pt;
         text-align:left;
         font-size:10.5pt;
@@ -659,7 +664,7 @@ p.para-sources {
 	margin-left:20.75pt;
 	margin-right:6.50pt;
 	margin-top:12.00pt;
-	margin-bottom:0.00pt;
+	margin-bottom:0;
 	text-align:left;
 	font-size:14pt;
 	color:#003366;
@@ -726,41 +731,6 @@ a.normal-sources:hover {
 
 /* ------------- Bas de pages : Copyright  ----------------------- */
 
-
-p.footer_ {
-	margin-top:4.00pt;
-	margin-bottom:1pt;
-	text-align:left;
-	font-size:11pt;
+.copyright img {
+	width: 200px !important;
 }
-#footer_ {
-          line-height:10.00pt;
-          margin-left:0pt;
-          margin-right:0.0pt;
-          margin-top:0.0pt;
-          text-align:left;
-          margin-bottom:0.00pt;
-}
-p.copyright {
-	  margin-left:20.75pt;
-	  margin-right:0.0pt;
-	  margin-top:0.0pt;
-	  text-align:left;
-	  margin-bottom:1.00pt;
-	  font-size:10.50pt;
-	  text-decoration:none;
-	  font-weight:normal;
-	  color:#6992AF;
-}
-a.copyright_2:link, a.copyright_2:hover, a.copyright_2:visited {
-	margin-right:6.50pt;
-	margin-top:0pt;
-	margin-bottom:0pt;
-	text-align:left;
-	text-decoration:none;
-	font-weight:normal;
-	color:#6992AF;
-}
-
-/* ------------- Page d'accueil : KHL 11/02/17 - styles transférés dans la page d'accueil ----------------------- */
-

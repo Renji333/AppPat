@@ -201,13 +201,13 @@ mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, mm-menu_selec
     margin-bottom: 0;
 }
 
-.icoActualite, .icoFiscalite, .icoFamille, .icoEpargne, .icoRetraite, .icoCredits, .icoDirigeants, .icoDossiers, .icoOutils {
+.icoActualite, .icoFiscalite, .icoFamille, .icoPlacements, .icoRetraite, .icoDirigeants, .icoImmobilier, .icoOutils {
     position: relative;
     display: inline-block;
     padding-left: 35px;
 }
 
-.icoActualite::before, .icoFiscalite::before, .icoFamille::before, .icoEpargne::before, .icoRetraite::before, .icoCredits::before, .icoDirigeants::before, .icoDossiers::before, .icoOutils::before {
+.icoActualite::before, .icoFiscalite::before, .icoFamille::before, .icoPlacements::before, .icoRetraite::before, .icoDirigeants::before, .icoImmobilier::before, .icoOutils::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -232,7 +232,7 @@ mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, mm-menu_selec
     background-image: url("../img/famille.svg");
 }
 
-.icoEpargne::before {
+.icoPlacements::before {
     background-image: url("../img/epargne.svg");
 }
 
@@ -240,16 +240,12 @@ mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, mm-menu_selec
     background-image: url("../img/retraite.svg");
 }
 
-.icoCredits::before {
-    background-image: url("../img/credits.svg");
-}
-
 .icoDirigeants::before {
     background-image: url("../img/dirigeants.svg");
 }
 
-.icoDossiers::before {
-    background-image: url("../img/dossiers.svg");
+.icoImmobilier::before {
+    background-image: url("../img/immobilier.svg");
 }
 
 .icoOutils::before {
