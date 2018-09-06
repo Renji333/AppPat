@@ -5,7 +5,7 @@
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
 
-                <article id="currentPost" class="post <?php echo get_the_category()[0]->cat_name;?>">
+                <article id="currentPost" class="post <?php echo getAllCategorieSlug(get_the_category());?>">
 
                     <div class="actionsIcons">
 
