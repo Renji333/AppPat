@@ -397,7 +397,7 @@ article.post.famille::before, article.famille.container-article::before {
     background-image: url("../img/famille.svg");
 }
 
-article.post.epargne::before, article.placements.container-article::before {
+article.post.placements::before, article.placements.container-article::before {
     background-image: url("../img/placements.svg");
 }
 

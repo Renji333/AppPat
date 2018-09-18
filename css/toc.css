@@ -89,7 +89,7 @@ nav:not(.mm-menu)
 .mm-navbar {
     background-color: #FFF;
     border-bottom: solid 1px #0268AA;
-    height: 39px;
+    height: 60px;
     text-transform: uppercase;
     line-height: 12px !important;
 }
@@ -98,7 +98,11 @@ nav:not(.mm-menu)
     color: #004673 !important;
     font-family: poppinssemibold;
     font-size: 14px;
-    padding-top: 16px !important;
+    padding-top: 26px !important;
+}
+
+.mm-btn {
+    height: 60px;
 }
 
 .mm-menu .mm-btn:after, .mm-menu .mm-btn:before {
@@ -107,6 +111,10 @@ nav:not(.mm-menu)
 
 span.mm-navbar__breadcrumbs {
     color: #000 !important;
+}
+
+.mm-panel_has-navbar {
+    padding-top: 60px;
 }
 
 .mm-navbar_tabs>:not(.mm-navbar__tab_selected), .mm-navbars_bottom.mm-navbars_has-tabs .mm-navbar_tabs~.mm-navbar, .mm-navbars_top.mm-navbars_has-tabs>.mm-navbar:not(.mm-navbar_tabs) {
@@ -144,6 +152,11 @@ li.mm-listitem {
 .mm-listitem>a, .mm-listitem>span {
     text-overflow: initial;
     white-space: normal;
+    padding: 10px 10px 7px 20px;
+}
+
+.mm-counter {
+    margin-top: -8px;
 }
 
 .mm-menu .mm-listview .mm-btn_next:before, .mm-menu .mm-listview .mm-btn_next:after {
@@ -187,7 +200,7 @@ li.mm-listitem {
     border: solid 2px #0268AA;
 }
 
-mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, mm-menu_selected-hover .mm-listitem>a:not(.mm-btn_fullwidth):hover {
+.mm-menu_selected-hover .mm-listitem>a.mm-btn_fullwidth:hover+span, .mm-menu_selected-hover .mm-listitem>a:not(.mm-btn_fullwidth):hover {
     background: transparent;
 }
 
