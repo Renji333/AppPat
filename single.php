@@ -23,7 +23,53 @@
                     </p>
 
                     <div class="post-content">
-                        <?php the_content(); ?>
+
+                        <?php
+
+                            the_content();
+
+                            global $wpdb;
+                            $results = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_nlp_links n WHERE p.ID = n.idPostForLink and idPost = ".get_the_ID());
+                            $resultsPat = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_pat_links n WHERE p.ID = n.idPostForLink and idPost = ".get_the_ID());
+
+                            if($results != null || $resultsPat != null){
+
+                                echo "<h2>Pour en savoir plus :</h2>";
+
+                                if($results != null){
+
+                                    echo "<h4>Actualités :</h4>";
+
+                                    foreach ($results as $result)
+                                    {
+                                        if($result->title == '' || $result->title == null){
+                                            $result->title = $result->post_title;
+                                        }
+                                        echo '<li><a href="'.$result->guid.'">'.$result->title.'</a></li>';
+                                    }
+
+                                }
+
+                                if($resultsPat != null){
+
+                                    echo "<h4>Patrithèque :</h4>";
+
+                                    foreach ($resultsPat as $result)
+                                    {
+                                        if($result->title == '' || $result->title == null){
+                                            $result->title = $result->post_title;
+                                        }
+                                        echo '<li><a href="'.$result->guid.'">'.$result->title.'</a></li>';
+                                    }
+
+                                }
+
+                            }
+
+
+
+                            ?>
+
                     </div>
 
                 </article>
