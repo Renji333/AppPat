@@ -29,8 +29,8 @@
                             the_content();
 
                             global $wpdb;
-                            $results = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_nlp_links n WHERE p.ID = n.idPostForLink and idPost = ".get_the_ID());
-                            $resultsPat = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_pat_links n WHERE p.ID = n.idPostForLink and idPost = ".get_the_ID());
+                            $results = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_nlp_links n WHERE p.ID = n.idPostInLink and idPost = ".get_the_ID());
+                            $resultsPat = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_pat_links n WHERE p.ID = n.idPostInLink and idPost = ".get_the_ID());
 
                             if($results != null || $resultsPat != null){
 

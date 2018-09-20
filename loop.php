@@ -2,7 +2,13 @@
 <?php
 
     if(!isset($_GET['s'])){
-        query_posts('category_name=NLP');
+
+        query_posts( array(
+            'category_name'  => 'NLP',
+            'posts_per_page' => 10,
+            'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+        ) );
+
     }
 
     if (have_posts()) : ?>

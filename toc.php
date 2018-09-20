@@ -19,7 +19,15 @@
     <!-- actu -->
 
     <?php
+
         global $wpdb;
-        echo str_replace("<li><a href='".$current_url, "<li class=' mm-listitem_selected '><a href='$current_url'" ,$wpdb->get_results("SELECT * FROM {$wpdb->prefix}tocs WHERE aides = 'integrale' ")[0]->content); ?>
+
+        if($current_url != home_url()."/"){
+            echo str_replace('<li><a href="'.$current_url, '<li class=" Selected "><a href="'.$current_url ,$wpdb->get_results("SELECT * FROM {$wpdb->prefix}tocs WHERE aides = 'integrale' ")[0]->content);
+        }else{
+            echo $wpdb->get_results("SELECT * FROM {$wpdb->prefix}tocs WHERE aides = 'integrale' ")[0]->content;
+        }
+
+        ?>
 
 </nav>

@@ -26,7 +26,7 @@ function writeNlpToc($e,$link){
         foreach ($posts as $p) {
 
             if($p->guid == $link){
-                $class = " class=' mm-listitem_selected '";
+                $class = " class=' Selected '";
             }else{
                 $class = "";
             }
