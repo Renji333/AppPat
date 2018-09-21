@@ -356,10 +356,6 @@ article.container-article-focus h4{
     font-size: 22px;
 }
 
-article.immobilier.container-article-focus::before {
-    background-image: url("https://www.artemiscourtage.com/wp-content/uploads/2017/11/credit-immobilier-ptz-1-760x358.jpg");
-}
-
 /* Single */
 /* Article Post Content Design */
 article.post{
