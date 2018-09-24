@@ -1,11 +1,13 @@
 <?php
 
-    if(is_home()){
+    $current_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+    if($current_link == home_url().'/'){
 
         query_posts( array(
             'category_name'  => 'NLP',
-            'posts_per_page' => 15,
-            'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+            'posts_per_page' => 5,
+            'paged' => 1,
         ) );
 
         $i = 0;
@@ -98,6 +100,17 @@
         </div>
 
     <?php } else {
+
+
+        if(isset($_GET['type']) && $_GET['type'] != null){
+
+            query_posts( array(
+                'category_name'  => 'NLP',
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                'posts_per_page' => 15,
+            ));
+
+        }
 
         if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>

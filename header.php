@@ -33,7 +33,7 @@
         <div class="HeaderBlock AppLogout">
             <img src="https://www.instituteofhypnotherapy.com/wp-content/uploads/2016/01/tutor-8.jpg" alt="..." class="UserAvatar"/>
             <span class="UserName">John Doe</span>
-            <a href="<?php echo wp_logout_url(); ?>">
+            <a href="<?php echo wp_logout_url('$index.php'); ?>">
                 <img src="<?php bloginfo('template_directory'); ?>/img/logout.svg" alt="..." class="LogOutIcon"/>
             </a>
         </div>

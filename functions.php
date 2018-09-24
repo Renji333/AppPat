@@ -3,6 +3,30 @@
 show_admin_bar( false );
 add_theme_support( 'post-thumbnails' );
 
+add_action('init', function(){
+
+    // not the login request?
+    if(!isset($_POST['action']) || $_POST['action'] !== 'my_login_action')
+        return;
+
+    // see the codex for wp_signon()
+    $creds = array(
+        'user_login'    => $_POST['id'],
+        'user_password' => $_POST['mdp'],
+        'remember'      => true
+    );
+
+    $user = wp_signon( $creds, false );
+
+    if(is_wp_error($user)){
+        wp_die('Login failed. Wrong password or user name?');
+    }
+
+    header('Location: ' . $_SERVER['REQUEST_URI']);
+    exit;
+
+});
+
 function getAllCategorieSlug($e){
 
     $ret = '';

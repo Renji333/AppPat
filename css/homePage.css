@@ -1,0 +1,371 @@
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+hr {
+    width: 330px;
+    background: #cbced0;
+    border: none;
+    height: 1px;
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'source_sans_proregular';
+	overflow: hidden;
+}
+
+.blocImg, .blockLogin, .loginPage .blocImg, .loginPage .blockLogin {
+	height: 100%;
+	width: 50%;
+	float: left;
+}
+
+.loginPage {
+	height: 100%;
+}
+
+.loginPage .blocImg {
+	width: 50%;
+	position: relative;
+	color: #4a555e;
+}
+
+.presHarvest {
+	position: absolute;
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	margin-left: -284px;
+	margin-top: -235px;
+}
+
+.presHarvest h1 {
+	font-family: 'poppinsbold';
+	font-size: 32px;
+	font-weight: normal;
+	margin: 0 0 20px 0;
+}
+
+.presHarvest h2 {
+	font-family: 'poppinsregular';
+	font-size: 18px;
+	font-weight: normal;
+	margin: 0 0 30px 0;
+	line-height: 24px;
+}
+
+.overlay {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #FFF;
+	opacity: 0.85;
+	z-index: 1;
+}
+
+.loginPage .presHarvest a {
+	color: #FFF;
+	border-color: #FFF;
+	margin-top: 10px;
+	display:  inline-block;
+}
+
+.loginPage .blockLogin {
+	width: 50%;
+}
+
+.blocImg {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	background-image: url('../img/pat.jpg');
+}
+
+.blockLogin {
+	background-color: #FFF;
+	text-align: center;
+	overflow-y: auto;
+}
+
+
+
+.loginForm {
+	padding: 30px 60px;
+	text-align: left;
+}
+
+.loginForm h3 {
+	font-family: 'poppinsbold';
+	font-size: 21px;
+	color: #4a555e;
+}
+
+.blokInput {
+	position: relative;
+	padding-top: 10px;
+}
+.blokInput .inputText {
+	width: calc(100% - 28px);
+	padding: 12px;
+	outline: none;
+}
+.blokInput .floating-label {
+	color: #4a555e;
+	position: absolute;
+	pointer-events: none;
+	left: 15px;
+	top: 22px;
+	transition: 0.2s ease all;
+}
+.blokInput input:focus ~ .floating-label,
+.blokInput input:not(:focus):valid ~ .floating-label {
+	top: -12px;
+	font-weight: 700;
+}
+
+.blokInput input:focus {
+	border: solid 2px #4a555e;
+}
+
+.loginPage .logoHarvest {
+	text-align: left;
+	padding: 80px 60px 0 60px;
+	margin: 80px 0 40px 0;
+}
+
+.blokInput + .blokInput {
+	margin-top: 40px;
+}
+
+.logoHarvest {
+	margin: 80px 0;
+	text-align: center;
+}
+
+.blockSection {
+	text-align: center;
+	font-size: 16px;
+	color: #4B575F;
+	font-family: 'poppinsregular';
+	width: 50%;
+	line-height: 24px;
+	display: inline-block;
+	border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
+	box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
+	padding: 40px 20px;
+}
+
+.blockSection strong {
+	font-size: 21px;
+	display: inline-block;
+	margin-bottom: 10px;
+	font-family: 'poppinsbold';
+}
+
+.blockSection a {
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 17px;
+	padding: 10px 30px;
+	border-radius: 25px;
+	margin-top: 10px;
+	background: #cf003c;
+	background: -moz-linear-gradient(left, #cf003c 0%, #ed213a 100%); 
+	background: -webkit-linear-gradient(left, #cf003c 0%,#ed213a 100%); 
+	background: linear-gradient(to right, #cf003c 0%,#ed213a 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf003c', endColorstr='#ed213a',GradientType=1 );
+}
+
+.blockSection+.blockSection {
+	margin-top: 50px;
+}
+
+#list-filter {
+	width: 1024px;
+	margin: auto;
+}
+
+.jplist-panel {
+	padding: 0 5px 75px 5px;
+}
+
+.jplist-panel input[type=text] {
+	width: 984px;
+	height: 40px;
+	border: solid 4px #CCC;
+	border-radius: 0;
+	padding: 0 10px;
+	margin-bottom: 5px;
+}
+
+.jplist-panel button {
+	display: inline-block;
+	margin-top: 0;
+	border: none;
+	text-decoration:  underline;
+	height: 10px;
+}
+
+.jplist-panel button, .jplist-panel button:hover, .jplist-panel button:active {
+	outline: none;
+	color: #4a555e;
+	background: none;
+	cursor: pointer;
+	height: auto;
+}
+
+.list {
+	padding-bottom: 30px
+}
+
+.list-item {
+	display: inline-block;
+	width: calc(33.33333% - 20px);
+	padding: 5px;
+}
+
+.lien {
+	text-decoration: none;
+	color: #cf003c;
+	border: solid 1px #CCC;
+	border-radius: 6px;
+	padding: 10px 15px;
+	display: block;
+	transition: all .2s ease-in-out;
+}
+
+.lien:hover {
+	background-color: #cf003c;
+	color: #FFF;
+}
+
+
+.fullw {background-color: #f5f5f5;}
+.fullw .blockLogin {margin: auto; float: none;}
+.fullw .logoHarvest {margin-top: 0; text-align: center; margin-bottom: 20px;}
+.fullw .logoHarvest img {width:170px}
+
+
+.errorId .inputText, .errorPw .inputText {
+	border: solid 1px #cf003c;
+	outline: solid 1px #cf003c;
+	position: relative;
+}
+
+.errorId .blocking-span::after, .errorPw .blocking-span::after {
+	position: absolute;
+	color: #cf003c;
+	font-size: 14px;
+	left: 0;
+	top: 54px;
+}
+
+.errorId .blocking-span::after {
+	content: 'Identifiant non reconnu'
+}
+
+.errorPw .blocking-span::after {
+	content: 'Mot de passe incorrect'
+}
+
+.blokInput.errorId input:focus, .blokInput.errorPw input:focus {
+	border: solid 1px #cf003c;
+	outline: solid 1px #cf003c;
+}
+
+/* FCH SURCHARGE */
+
+.loginForm h1 {
+	font-size: 50px;
+	font-family: poppinsextrabold;
+	color: #024D7E !important;
+	text-align: center;
+	margin-bottom: 0px;
+}
+
+.loginForm p {
+	font-size: 16px;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	font-family: 'source_sans_prolight';
+	color: #939393;
+	line-height: 18px;
+	text-align: center;
+}
+
+.loginForm button {
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+	font-size: 17px;
+	padding: 13px 30px;
+	border: none;
+	outline: 0;
+	cursor: pointer;
+	border-radius: 25px;
+	background: #024D7E;
+	background: -moz-linear-gradient(left, #024D7E 0%, #294f7e 100%);
+	background: -webkit-linear-gradient(left, #024D7E 0%,#294f7e 100%);
+	background: linear-gradient(to right, #024D7E 0%,#294f7e 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf003c', endColorstr='#ed213a',GradientType=1 );
+}
+
+.loginPage a{
+
+	font-family: 'poppinslight';
+	letter-spacing: 1px;
+	font-size: 12px;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #333333;
+
+}
+
+.loginPage a.bubble{
+	color: #024D7E;
+	font-family: 'poppinsbold';
+	letter-spacing: 1px;
+	font-size: 12px;
+	border: solid 1px #024D7E;
+	padding: 10px 20px;
+	border-radius: 25px;
+	text-decoration: none;
+	margin-bottom: 30px;
+	display: inline-block;
+}
+
+.loginPage .logoHarvest img {
+	width: 80px;
+	height: auto;
+}
+
+.loginPage .center {
+	text-align: center !important;
+	padding-top: 20px;
+}
+
+.loginPage .center div{
+	padding-bottom: 10px;
+}
+
+input:-webkit-autofill {
+	 -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
