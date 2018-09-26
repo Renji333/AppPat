@@ -27,6 +27,36 @@ add_action('init', function(){
 
 });
 
+function insert_posts_views($uid,$pid){
+    global $wpdb;
+
+    $rows = $wpdb->get_var("SELECT COUNT(DISTINCT UID) AS c FROM {$wpdb->prefix}posts_views WHERE PID = $pid");
+
+    if( $rows == "0" ){
+
+        $wpdb->insert("{$wpdb->prefix}posts_views", array(
+            'UID' => $uid,
+            'PID' => $pid,
+        ));
+
+    }
+
+}
+
+function getMoreReadsByCat($e){
+
+    global $wpdb;
+
+    $results = $wpdb->get_results("SELECT COUNT(DISTINCT v.UID) AS vues, p.`post_title`, p.`guid` FROM `{$wpdb->prefix}posts` as p, {$wpdb->prefix}posts_views as v, `{$wpdb->prefix}terms` as t, `{$wpdb->prefix}term_relationships` as r  WHERE p.`post_type` = 'post' AND p.`ID` = r.`object_id` AND r.`term_taxonomy_id` IN (SELECT `term_id` FROM `{$wpdb->prefix}terms` WHERE `name` LIKE '%$e%') AND v.PID = p.ID GROUP BY v.PID ORDER BY vues DESC");
+
+    foreach ($results as $item){
+        echo "<li class='puce'><a href='$item->guid'>$item->post_title</a></li>";
+    }
+
+    return $results;
+
+}
+
 function getAllCategorieSlug($e){
 
     $ret = '';

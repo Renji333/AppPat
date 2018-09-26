@@ -1,6 +1,12 @@
 <?php get_header(); ?>
 <?php get_template_part('toc'); ?>
 
+<?php
+    if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') !== false) {
+        insert_posts_views(get_current_user_id(), get_the_ID());
+    }
+    ?>
+
     <div class="main-container container-fluid">
         <?php if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>

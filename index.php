@@ -15,9 +15,9 @@
 <div class="main-container">
     <?php get_template_part('loop');?>
     <?php if( $current_link != home_url().'/'){ ?>
-        <div class="col-lg-12" style="margin-bottom: 20px;text-align: center;">
-            <?php previous_posts_link();?>
-            <?php next_posts_link();?>
+        <div class="col-lg-12 suiv-prec" style="margin-bottom: 20px;text-align: center;">
+            <?php previous_posts_link("« Précédent");?>
+            <?php next_posts_link("Suivant »");?>
         </div>
     <?php } else { ?>
         <div class="col-lg-9" style="margin-bottom: 20px;text-align: center;">

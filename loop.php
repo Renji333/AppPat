@@ -79,21 +79,7 @@
                 <span class="etiquette">Articles les plus lus</span>
 
                 <ul class="ul">
-                    <li class="puce">
-                        <a href="http://preprod-patritheque.harvest/index.php/2018/09/19/plan-pauvrete-vers-la-creation-dun-revenu-universel-dactivite/">Plan pauvreté - Vers la création d'un revenu universel d'activité</a>
-                    </li>
-                    <li class="puce">
-                        <a href="http://preprod-patritheque.harvest/index.php/2018/09/19/travailleurs-independants-creation-dune-allocation-forfaitaire-en-cas-de-cessation-dactivite/">Travailleurs indépendants - Création d'une allocation forfaitaire en cas de cessation d'activité</a>
-                    </li>
-                    <li class="puce">
-                        <a href="http://preprod-patritheque.harvest/index.php/2018/09/19/renovation-energetique-lancement-de-la-campagne-faire/">Rénovation énergétique - Lancement de la campagne "FAIRE"</a>
-                    </li>
-                    <li class="puce">
-                        <a href="http://preprod-patritheque.harvest/index.php/2018/09/19/plus-values-immobilieres-abattement-exceptionnel-en-cas-de-vente-dun-terrain-a-batir-ou-assimile/">Plus-values immobilières - Abattement exceptionnel en cas de vente d'un terrain à bâtir ou assimilé</a>
-                    </li>
-                    <li class="puce">
-                        <a href="http://preprod-patritheque.harvest/index.php/2018/09/19/pea-simplification-des-modalites-de-transfert-de-titres-non-cotes/">PEA - Simplification des modalités de transfert de titres non cotés</a>
-                    </li>
+                    <?php getMoreReadsByCat("NLP");?>
                 </ul>
 
             </div>
