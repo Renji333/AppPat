@@ -47,36 +47,13 @@ function writeNlpToc($e,$link){
 
         foreach ($categories as $c) {
 
-            echo "<li><span>$c->cat_name</span><ul>";
-
-            writeNlpToc($c->term_id,$link);
-
-            echo "</ul></li>";
-
-        }
-
-    }else{
-
-        $posts = get_posts( array(
-            'numberposts'    => 10,
-            'category'       => $e
-        ) );
-
-        if ( $posts ) {
-
-            foreach ($posts as $p) {
-
-                if($p->guid == $link){
-                    $class = " class=' Selected '";
-                }else{
-                    $class = "";
-                }
-
-                echo "<li $class>
-                    <a href='".$p->guid."'>".$p->post_title."</a>
-                  </li>";
-
+            if(home_url()."/?categorie=".$c->term_id == $link){
+                $class = " class=' Selected '";
+            }else{
+                $class = "";
             }
+
+            echo "<li $class><a href='".home_url()."?categorie=".$c->term_id."'>".$c->cat_name."</a></li>";
 
         }
 

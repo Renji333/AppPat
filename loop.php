@@ -110,6 +110,14 @@
                 'posts_per_page' => 15,
             ));
 
+        } else if(isset($_GET['categorie']) && $_GET['categorie'] != null){
+
+            query_posts( array(
+                'cat'  => intval($_GET['categorie']),
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                'posts_per_page' => 15,
+            ));
+
         }
 
         if (have_posts()) : ?>
