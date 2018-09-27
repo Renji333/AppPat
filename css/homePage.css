@@ -4,16 +4,6 @@
     display: table;
 }
 
-hr {
-    width: 330px;
-    background: #cbced0;
-    border: none;
-    height: 1px;
-    margin-top: 30px;
-    margin-bottom: 60px;
-}
-
-
 html, body {
 	height: 100%;
 	margin: 0;
@@ -23,12 +13,14 @@ html, body {
 body {
 	font-family: 'source_sans_proregular';
 	overflow: hidden;
+	color: #45545F;
 }
 
 .blocImg, .blockLogin, .loginPage .blocImg, .loginPage .blockLogin {
 	height: 100%;
-	width: 50%;
 	float: left;
+	-webkit-transition: width .5s;
+    transition: width .5s;
 }
 
 .loginPage {
@@ -36,7 +28,6 @@ body {
 }
 
 .loginPage .blocImg {
-	width: 50%;
 	position: relative;
 	color: #4a555e;
 }
@@ -58,7 +49,6 @@ body {
 }
 
 .presHarvest h2 {
-	font-family: 'poppinsregular';
 	font-size: 18px;
 	font-weight: normal;
 	margin: 0 0 30px 0;
@@ -84,9 +74,6 @@ body {
 	display:  inline-block;
 }
 
-.loginPage .blockLogin {
-	width: 50%;
-}
 
 .blocImg {
 	-webkit-background-size: cover;
@@ -102,50 +89,44 @@ body {
 	overflow-y: auto;
 }
 
-
-
 .loginForm {
 	padding: 30px 60px;
-	text-align: left;
-}
-
-.loginForm h3 {
-	font-family: 'poppinsbold';
-	font-size: 21px;
-	color: #4a555e;
 }
 
 .blokInput {
 	position: relative;
 	padding-top: 10px;
+	text-align: left;
 }
+
+.blokInput label {
+	display: inline-block;
+	margin-bottom: 5px;
+	font-size: 14px;
+}
+
+
 .blokInput .inputText {
 	width: calc(100% - 28px);
 	padding: 12px;
 	outline: none;
-}
-.blokInput .floating-label {
-	color: #4a555e;
-	position: absolute;
-	pointer-events: none;
-	left: 15px;
-	top: 22px;
-	transition: 0.2s ease all;
-}
-.blokInput input:focus ~ .floating-label,
-.blokInput input:not(:focus):valid ~ .floating-label {
-	top: -12px;
-	font-weight: 700;
+	font-size: 14px;
+	font-family: 'source_sans_proregular';
+	background: #FBFBFC !important;
+	border: 1px solid #E9E9F0;
+	border-radius: 4px;
 }
 
+
 .blokInput input:focus {
-	border: solid 2px #4a555e;
+	border: solid 1px #becbd3;
 }
 
 .loginPage .logoHarvest {
 	text-align: left;
-	padding: 80px 60px 0 60px;
-	margin: 80px 0 40px 0;
+	padding: 30px 60px 0 60px;
+	margin: 0 0 40px 0;
+	text-align: center;
 }
 
 .blokInput + .blokInput {
@@ -157,199 +138,67 @@ body {
 	text-align: center;
 }
 
-.blockSection {
-	text-align: center;
-	font-size: 16px;
-	color: #4B575F;
-	font-family: 'poppinsregular';
-	width: 50%;
-	line-height: 24px;
-	display: inline-block;
-	border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
-	-moz-box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
-	box-shadow: 0px 0px 30px 0px rgba(204,204,204,1);
-	padding: 40px 20px;
+.loginForm form {
+	-webkit-transition: width .5s;
+    transition: width .5s;
 }
-
-.blockSection strong {
-	font-size: 21px;
-	display: inline-block;
-	margin-bottom: 10px;
-	font-family: 'poppinsbold';
-}
-
-.blockSection a {
-	display: inline-block;
-	color: #FFF;
-	text-decoration: none;
-	font-size: 17px;
-	padding: 10px 30px;
-	border-radius: 25px;
-	margin-top: 10px;
-	background: #cf003c;
-	background: -moz-linear-gradient(left, #cf003c 0%, #ed213a 100%); 
-	background: -webkit-linear-gradient(left, #cf003c 0%,#ed213a 100%); 
-	background: linear-gradient(to right, #cf003c 0%,#ed213a 100%); 
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf003c', endColorstr='#ed213a',GradientType=1 );
-}
-
-.blockSection+.blockSection {
-	margin-top: 50px;
-}
-
-#list-filter {
-	width: 1024px;
-	margin: auto;
-}
-
-.jplist-panel {
-	padding: 0 5px 75px 5px;
-}
-
-.jplist-panel input[type=text] {
-	width: 984px;
-	height: 40px;
-	border: solid 4px #CCC;
-	border-radius: 0;
-	padding: 0 10px;
-	margin-bottom: 5px;
-}
-
-.jplist-panel button {
-	display: inline-block;
-	margin-top: 0;
-	border: none;
-	text-decoration:  underline;
-	height: 10px;
-}
-
-.jplist-panel button, .jplist-panel button:hover, .jplist-panel button:active {
-	outline: none;
-	color: #4a555e;
-	background: none;
-	cursor: pointer;
-	height: auto;
-}
-
-.list {
-	padding-bottom: 30px
-}
-
-.list-item {
-	display: inline-block;
-	width: calc(33.33333% - 20px);
-	padding: 5px;
-}
-
-.lien {
-	text-decoration: none;
-	color: #cf003c;
-	border: solid 1px #CCC;
-	border-radius: 6px;
-	padding: 10px 15px;
-	display: block;
-	transition: all .2s ease-in-out;
-}
-
-.lien:hover {
-	background-color: #cf003c;
-	color: #FFF;
-}
-
-
-.fullw {background-color: #f5f5f5;}
-.fullw .blockLogin {margin: auto; float: none;}
-.fullw .logoHarvest {margin-top: 0; text-align: center; margin-bottom: 20px;}
-.fullw .logoHarvest img {width:170px}
-
-
-.errorId .inputText, .errorPw .inputText {
-	border: solid 1px #cf003c;
-	outline: solid 1px #cf003c;
-	position: relative;
-}
-
-.errorId .blocking-span::after, .errorPw .blocking-span::after {
-	position: absolute;
-	color: #cf003c;
-	font-size: 14px;
-	left: 0;
-	top: 54px;
-}
-
-.errorId .blocking-span::after {
-	content: 'Identifiant non reconnu'
-}
-
-.errorPw .blocking-span::after {
-	content: 'Mot de passe incorrect'
-}
-
-.blokInput.errorId input:focus, .blokInput.errorPw input:focus {
-	border: solid 1px #cf003c;
-	outline: solid 1px #cf003c;
-}
-
-/* FCH SURCHARGE */
 
 .loginForm h1 {
 	font-size: 50px;
 	font-family: poppinsextrabold;
 	color: #024D7E !important;
-	text-align: center;
 	margin-bottom: 0px;
 }
 
-.loginForm p {
-	font-size: 16px;
-	margin-bottom: 30px;
-	margin-top: 10px;
+.loginForm h1+p {
 	font-family: 'source_sans_prolight';
-	color: #939393;
-	line-height: 18px;
-	text-align: center;
+	margin-top: 0;
+	margin-bottom: 60px;
+	color: #A5A6AC;
 }
 
 .loginForm button {
 	display: inline-block;
+	font-family: 'source_sans_prolight';
 	color: #FFF;
 	text-decoration: none;
-	font-size: 17px;
+	font-size: 18px;
 	padding: 13px 30px;
+	margin: 40px 0 10px 0;
 	border: none;
 	outline: 0;
 	cursor: pointer;
 	border-radius: 25px;
-	background: #024D7E;
-	background: -moz-linear-gradient(left, #024D7E 0%, #294f7e 100%);
-	background: -webkit-linear-gradient(left, #024D7E 0%,#294f7e 100%);
-	background: linear-gradient(to right, #024D7E 0%,#294f7e 100%);
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cf003c', endColorstr='#ed213a',GradientType=1 );
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0268aa+0,05abe0+100 */
+	background: #0268aa; /* Old browsers */
+	background: -moz-linear-gradient(left, #0268aa 0%, #05abe0 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, #0268aa 0%,#05abe0 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, #0268aa 0%,#05abe0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0268aa', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 */
 }
 
-.loginPage a{
-
-	font-family: 'poppinslight';
+.loginPage a {
 	letter-spacing: 1px;
 	font-size: 12px;
-	padding: 10px 20px;
 	text-decoration: none;
 	color: #333333;
-
 }
 
-.loginPage a.bubble{
-	color: #024D7E;
-	font-family: 'poppinsbold';
+.loginPage a.bubble {
+	font-family: 'source_sans_prolight';
+	color: #0268AA;
 	letter-spacing: 1px;
-	font-size: 12px;
-	border: solid 1px #024D7E;
+	font-size: 16px;
+	border: solid 1px #0268AA;
 	padding: 10px 20px;
 	border-radius: 25px;
 	text-decoration: none;
 	margin-bottom: 30px;
 	display: inline-block;
+}
+
+.loginPage a.bubble span {
+	font-family: 'source_sans_proregular';
 }
 
 .loginPage .logoHarvest img {
@@ -357,16 +206,130 @@ body {
 	height: auto;
 }
 
-.loginPage .center {
-	text-align: center !important;
-	padding-top: 20px;
-}
-
-.loginPage .center div{
-	padding-bottom: 10px;
-}
-
 input:-webkit-autofill {
-	-webkit-box-shadow: 0 0 0px 1000px white inset;
-	border: 1px solid #333333;
+	-webkit-box-shadow: 0 0 0px 1000px #FBFBFC inset;
 }
+.link-pass {
+	margin-top: 0;
+}
+
+/* MEDIA QUERIES */
+	/* XS */
+	@media screen and (max-width: 767px) { 
+
+	.navbar {
+		height: 110px;
+		border: none;
+	}
+
+		.navbar-nav {
+			text-align: center;
+			margin-top: 109px;
+			background: white;
+			border-top: solid 1px grey;
+		}
+
+		.navbar-brand {
+			float: none;
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			left:  0;
+			right: 0;
+		}
+
+		.navbar-brand img{
+			height: 65px;
+			width: 100%;
+		}
+
+		.navbar-toggle {
+		    position: absolute;
+		    z-index: 999999;
+		    right: 0;
+		}
+
+		.focus-txt {
+			padding: 20px 20px 30px 20px;
+			height: auto;
+		}
+
+		.focus {
+			height: auto;
+		}
+
+		.focus-txt p {
+			width: 100%;
+		}
+
+		.focus-img {
+			height: 250px;
+			background-size: cover;
+			background-position: center;
+			position: relative;
+			top: 0;
+			left: auto;
+			bottom: 0;
+			width: 100%;
+		}
+
+		.overlay input[type=text] {
+			width: 100%;
+		}
+
+		.overlay input[type="submit"] {
+			width: 100%;
+			margin-top: 5px
+		}
+
+
+
+	}
+	/* XS */
+	
+	@media screen and (max-width: 767px) {
+		.loginPage .blocImg {
+			width: 0;
+		}
+		.loginPage .blockLogin {
+			width: 100%;
+		}
+	}
+	
+	/* SM */
+	@media screen and (min-width: 768px) {
+		.loginPage .blocImg {
+			width: 40%;
+		}
+		.loginPage .blockLogin {
+			width: 60%;
+		}
+	}
+	/* SM */
+	
+	/* MD */
+	@media screen and (min-width: 992px) {
+		.loginPage .blocImg {
+			width: 50%;
+		}
+		.loginPage .blockLogin {
+			width: 50%;
+		}
+	}
+	/* MD */
+	
+	/* LG */
+	@media screen and (min-width: 1200px) {
+		.loginForm form {
+			width: 80%;
+			margin: auto;
+		}
+	}
+	/* LG */
+	@media screen and (min-width: 1440px) {
+		.loginForm form {
+			width: 60%;
+			margin: auto;
+		}
+	}
+/* MEDIA QUERIES */
