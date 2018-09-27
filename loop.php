@@ -2,15 +2,44 @@
 
     $current_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-    if($current_link == home_url().'/'){
+    if($current_link == home_url().'/' || isset($_GET['type']) && $_GET['type'] != null || isset($_GET['categorie']) && $_GET['categorie'] != null){
 
-        query_posts( array(
-            'category_name'  => 'NLP',
-            'posts_per_page' => 5,
-            'paged' => 1,
-        ) );
+        $catSupplement = "";
 
-        $i = 0;
+        if(isset($_GET['type']) && $_GET['type'] != null ){
+
+            query_posts( array(
+                'category_name'  => 'NLP',
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                'posts_per_page' => 15,
+            ));
+
+            $cat = 'NLP';
+            $i = 1;
+
+        } else if(isset($_GET['categorie']) && $_GET['categorie'] != null){
+
+            query_posts( array(
+                'cat'  => intval($_GET['categorie']),
+                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
+                'posts_per_page' => 15,
+            ));
+
+            $cat = get_cat_name(intval($_GET['categorie']));
+            $i = 1;
+            $catSupplement = "pour la catégorie \"$cat\"";
+
+        } else {
+
+            query_posts( array(
+                'category_name'  => 'NLP',
+                'posts_per_page' => 5,
+                'paged' => 1,
+            ) );
+
+            $i = 0;
+
+        }
 
         ?>
 
@@ -76,35 +105,16 @@
 
         <div class="col-lg-3">
             <div class="container-widget">
-                <span class="etiquette">Articles les plus lus</span>
+                <span class="etiquette">Articles les plus lus <?php echo $catSupplement;?></span>
 
                 <ul class="ul">
-                    <?php getMoreReadsByCat("NLP");?>
+                    <?php getMoreReadsByCat($cat);?>
                 </ul>
 
             </div>
         </div>
 
     <?php } else {
-
-
-        if(isset($_GET['type']) && $_GET['type'] != null){
-
-            query_posts( array(
-                'category_name'  => 'NLP',
-                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                'posts_per_page' => 15,
-            ));
-
-        } else if(isset($_GET['categorie']) && $_GET['categorie'] != null){
-
-            query_posts( array(
-                'cat'  => intval($_GET['categorie']),
-                'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
-                'posts_per_page' => 15,
-            ));
-
-        }
 
         if (have_posts()) : ?>
             <?php while (have_posts()) : the_post(); ?>
