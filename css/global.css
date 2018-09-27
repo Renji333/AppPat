@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: source_sans_proregular;
+    font-size: 14px
+}
+
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
@@ -218,7 +223,6 @@ footer ul{
 
 footer ul li{
     display: inline-block;
-    font-family: source_sans_proregular;
     font-size: 13px;
     color: #707070;
 }
@@ -310,11 +314,6 @@ article.container-article p{
 
 time, p{
     color: #333333;
-    font-family: source_sans_proregular;
-}
-
-.post-info a{
-    font-family: source_sans_proregular;
 }
 
 time{
@@ -476,10 +475,10 @@ article.post li, div.container-widget li{
 }
 
 article.post li::before {
-    margin-right: 10px;
-    margin-bottom: 2px;
-    height: 7px;
-    width: 7px;
+    margin-right: 11px;
+    margin-bottom: 1px;
+    height: 5px;
+    width: 5px;
     display: inline-block;
     content: "";
     background-color: #1FCCC4 !important;

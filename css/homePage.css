@@ -185,6 +185,17 @@ input:-webkit-autofill {
 
 
 /* XS */
+@media screen and (max-width: 639px) {
+	.loginForm h1 {
+		font-size: 40px;	
+	}
+	.loginForm h1+p>br {
+		display: none
+	}
+	.loginForm {
+		padding: 30px 20px;
+	}
+}
 
 @media screen and (max-width: 767px) {
 	.loginPage .blocImg {
