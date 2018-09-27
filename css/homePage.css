@@ -1,10 +1,5 @@
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-html, body {
+html,
+body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
@@ -16,11 +11,20 @@ body {
 	color: #45545F;
 }
 
-.blocImg, .blockLogin, .loginPage .blocImg, .loginPage .blockLogin {
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.blocImg,
+.blockLogin,
+.loginPage .blocImg,
+.loginPage .blockLogin {
 	height: 100%;
 	float: left;
 	-webkit-transition: width .5s;
-    transition: width .5s;
+	transition: width .5s;
 }
 
 .loginPage {
@@ -32,48 +36,12 @@ body {
 	color: #4a555e;
 }
 
-.presHarvest {
-	position: absolute;
-	z-index: 2;
-	top: 50%;
-	left: 50%;
-	margin-left: -284px;
-	margin-top: -235px;
-}
-
-.presHarvest h1 {
-	font-family: 'poppinsbold';
-	font-size: 32px;
-	font-weight: normal;
-	margin: 0 0 20px 0;
-}
-
-.presHarvest h2 {
-	font-size: 18px;
-	font-weight: normal;
-	margin: 0 0 30px 0;
-	line-height: 24px;
-}
-
-.overlay {
-	content: '';
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: #FFF;
-	opacity: 0.85;
-	z-index: 1;
-}
-
 .loginPage .presHarvest a {
 	color: #FFF;
 	border-color: #FFF;
 	margin-top: 10px;
-	display:  inline-block;
+	display: inline-block;
 }
-
 
 .blocImg {
 	-webkit-background-size: cover;
@@ -105,8 +73,7 @@ body {
 	font-size: 14px;
 }
 
-
-.blokInput .inputText {
+.blokInput input {
 	width: calc(100% - 28px);
 	padding: 12px;
 	outline: none;
@@ -116,7 +83,6 @@ body {
 	border: 1px solid #E9E9F0;
 	border-radius: 4px;
 }
-
 
 .blokInput input:focus {
 	border: solid 1px #becbd3;
@@ -129,7 +95,7 @@ body {
 	text-align: center;
 }
 
-.blokInput + .blokInput {
+.blokInput+.blokInput {
 	margin-top: 40px;
 }
 
@@ -140,7 +106,7 @@ body {
 
 .loginForm form {
 	-webkit-transition: width .5s;
-    transition: width .5s;
+	transition: width .5s;
 }
 
 .loginForm h1 {
@@ -169,12 +135,12 @@ body {
 	outline: 0;
 	cursor: pointer;
 	border-radius: 25px;
-/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0268aa+0,05abe0+100 */
-	background: #0268aa; /* Old browsers */
-	background: -moz-linear-gradient(left, #0268aa 0%, #05abe0 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(left, #0268aa 0%,#05abe0 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to right, #0268aa 0%,#05abe0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0268aa', endColorstr='#05abe0',GradientType=1 ); /* IE6-9 */
+	background: #0268aa;
+	background: -moz-linear-gradient(left, #0268aa 0%, #05abe0 100%);
+	background: -webkit-linear-gradient(left, #0268aa 0%, #05abe0 100%);
+	background: linear-gradient(to right, #0268aa 0%, #05abe0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0268aa', endColorstr='#05abe0', GradientType=1);
+	box-shadow: 0px 3px 6px rgba(2, 104, 170, .5);
 }
 
 .loginPage a {
@@ -209,127 +175,78 @@ body {
 input:-webkit-autofill {
 	-webkit-box-shadow: 0 0 0px 1000px #FBFBFC inset;
 }
-.link-pass {
+
+.linkPass {
 	margin-top: 0;
 }
 
+
 /* MEDIA QUERIES */
-	/* XS */
-	@media screen and (max-width: 767px) { 
 
-	.navbar {
-		height: 110px;
-		border: none;
+
+/* XS */
+
+@media screen and (max-width: 767px) {
+	.loginPage .blocImg {
+		width: 0;
 	}
-
-		.navbar-nav {
-			text-align: center;
-			margin-top: 109px;
-			background: white;
-			border-top: solid 1px grey;
-		}
-
-		.navbar-brand {
-			float: none;
-			text-align: center;
-			width: 100%;
-			position: absolute;
-			left:  0;
-			right: 0;
-		}
-
-		.navbar-brand img{
-			height: 65px;
-			width: 100%;
-		}
-
-		.navbar-toggle {
-		    position: absolute;
-		    z-index: 999999;
-		    right: 0;
-		}
-
-		.focus-txt {
-			padding: 20px 20px 30px 20px;
-			height: auto;
-		}
-
-		.focus {
-			height: auto;
-		}
-
-		.focus-txt p {
-			width: 100%;
-		}
-
-		.focus-img {
-			height: 250px;
-			background-size: cover;
-			background-position: center;
-			position: relative;
-			top: 0;
-			left: auto;
-			bottom: 0;
-			width: 100%;
-		}
-
-		.overlay input[type=text] {
-			width: 100%;
-		}
-
-		.overlay input[type="submit"] {
-			width: 100%;
-			margin-top: 5px
-		}
-
-
-
+	.loginPage .blockLogin {
+		width: 100%;
 	}
-	/* XS */
-	
-	@media screen and (max-width: 767px) {
-		.loginPage .blocImg {
-			width: 0;
-		}
-		.loginPage .blockLogin {
-			width: 100%;
-		}
+}
+
+
+/* XS */
+
+
+/* SM */
+
+@media screen and (min-width: 768px) {
+	.loginPage .blocImg {
+		width: 40%;
 	}
-	
-	/* SM */
-	@media screen and (min-width: 768px) {
-		.loginPage .blocImg {
-			width: 40%;
-		}
-		.loginPage .blockLogin {
-			width: 60%;
-		}
+	.loginPage .blockLogin {
+		width: 60%;
 	}
-	/* SM */
-	
-	/* MD */
-	@media screen and (min-width: 992px) {
-		.loginPage .blocImg {
-			width: 50%;
-		}
-		.loginPage .blockLogin {
-			width: 50%;
-		}
+}
+
+
+/* SM */
+
+
+/* MD */
+
+@media screen and (min-width: 992px) {
+	.loginPage .blocImg {
+		width: 50%;
 	}
-	/* MD */
-	
-	/* LG */
-	@media screen and (min-width: 1200px) {
-		.loginForm form {
-			width: 80%;
-			margin: auto;
-		}
+	.loginPage .blockLogin {
+		width: 50%;
 	}
-	/* LG */
-	@media screen and (min-width: 1440px) {
-		.loginForm form {
-			width: 60%;
-			margin: auto;
-		}
+}
+
+
+/* MD */
+
+
+/* LG */
+
+@media screen and (min-width: 1200px) {
+	.loginForm form {
+		width: 80%;
+		margin: auto;
 	}
+}
+
+
+/* LG */
+
+@media screen and (min-width: 1440px) {
+	.loginForm form {
+		width: 60%;
+		margin: auto;
+	}
+}
+
+
 /* MEDIA QUERIES */
