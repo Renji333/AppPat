@@ -1,5 +1,12 @@
 <?php
 
+if ( !is_user_logged_in() && home_url().'/' != "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") {
+
+    wp_redirect( home_url());
+    exit();
+
+}
+
 show_admin_bar( false );
 add_theme_support( 'post-thumbnails' );
 
