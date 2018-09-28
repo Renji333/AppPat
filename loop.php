@@ -94,25 +94,25 @@
             </p>
         <?php endif; ?>
 
-        <div class="col-lg-3">
-            <div class="container-widget">
-                <span class="etiquette">Dossier d'actualité</span>
-                <a href="http://preprod-patritheque.harvest" class="blueBubble">
-                    Projet de loi de finances 2018
-                </a>
-            </div>
-        </div>
-
-        <div class="col-lg-3">
-            <div class="container-widget">
-                <span class="etiquette">Articles les plus lus <?php echo $catSupplement;?></span>
-
-                <ul class="ul">
-                    <?php getMoreReadsByCat($cat);?>
-                </ul>
-
-            </div>
-        </div>
+        <aside class="col-lg-3">
+            <?php if( $current_link != home_url().'/'){ ?>
+                <div class="fixed">
+            <?php } else { ?>
+                <div>
+            <?php } ?>
+                <div class="container-widget">
+                    <span class="etiquette">Dossier d'actualité</span>
+                    <a href="http://preprod-patritheque.harvest" class="blueBubble">
+                        Projet de loi de finances 2018
+                    </a>
+                </div>
+                <div class="container-widget">
+                    <span class="etiquette">Articles les plus lus</span>
+                    <ul class="ul">
+                        <?php getMoreReadsByCat($cat);?>
+                    </ul>
+                </div>
+        </aside>
 
     <?php } else {
 

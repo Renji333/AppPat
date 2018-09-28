@@ -622,26 +622,61 @@ a.blueBubble:hover{
     background-color: #0268AA;
 }
 
+a.bubble {
+    font-family: 'source_sans_prolight';
+    color: #0268AA;
+    letter-spacing: 1px;
+    font-size: 14px;
+    border: solid 1px #0268AA;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FFFFFF;
+}
+
 .container-widget ul.ul{
     padding-left: 20px;
     margin-bottom: 0;
 }
 
-.suiv-prec a{
+
+.pagination {
+    clear:both;position:relative;
+    font-size:12px;
+    line-height:13px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+ 
+.pagination span, .pagination a {
+    width:auto;
     display: inline-block;
-    padding: 5px 14px;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    color: #0268AA;
-    text-decoration: none;
+    margin: 2px 5px 2px 0;
+    padding:6px 9px 5px 9px;
+    text-decoration:none;
+    color:#015789;
+    background: #FFFFFF;
+    border-radius: 4px;
 }
 
-.suiv-prec a:hover{
-    text-decoration: none;
-    background-color: #eee;
-    display: inline-block;
-    padding: 5px 14px;
-    border: 1px solid #ddd;
-    border-radius: 15px;
+.pagination a {
+    transition: all .15s;
+}
+ 
+.pagination .current{
+    padding:6px 9px 5px 9px;
+    background: #1cc7d0;
+    color:#fff;
+}
+ 
+.pagination a:hover{
+    color:#fff;
+    background: #1cc7d0;
+}
+
+.fixed {
+    position: fixed;
+    margin-right: 30px;
 }

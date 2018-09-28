@@ -14,18 +14,15 @@
 
 <div class="main-container">
     <?php get_template_part('loop');?>
+    <div class="col-lg-9 suiv-prec">
     <?php if( $current_link != home_url().'/'){ ?>
-        <div class="col-lg-9 suiv-prec" style="margin-bottom: 20px;text-align: center;">
-            <?php previous_posts_link("« Précédent");?>
-            <?php next_posts_link("Suivant »");?>
-        </div>
+            <?php pressPagination($pages ='', $range = 2) ;?>
     <?php } else { ?>
-        <div class="col-lg-9" style="margin-bottom: 20px;text-align: center;">
-            <a href="?type=all" class="blueBubble" style="display: inline !important;">
+            <a href="?type=all" class="bubble">
                 Voir toutes les actualités
             </a>
-        </div>
     <?php } ?>
+    </div>
 </div>
 
 <?php get_footer(); ?>
