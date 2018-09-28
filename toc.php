@@ -6,6 +6,18 @@
 
             <?php
 
+                if(home_url()."/" == set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] )){
+                    $class = " class=' Selected '";
+                }else{
+                    $class = "";
+                }
+
+            ?>
+
+            <li class="mm-listitem <?php echo $class;?>"><a href="http://preprod-patritheque.harvest/">Toute l'actualité</a></li>
+
+            <?php
+
                     global $wp;
                     $current_url  = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
 
