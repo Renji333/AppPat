@@ -24,9 +24,11 @@
 
                     <h1 class="post-title"><?php the_title(); ?></h1>
 
-                    <p class="post-info">
-                        <?php the_date(); ?>
-                    </p>
+                    <?php if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') !== false) { ?>
+                        <p class="post-info">
+                            <?php the_date(); ?>
+                        </p>
+                    <?php } ?>
 
                     <div class="post-content">
 

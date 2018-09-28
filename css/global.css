@@ -633,6 +633,7 @@ a.bubble {
     text-decoration: none;
     display: inline-block;
     background-color: #FFFFFF;
+    margin-bottom: 10px;
 }
 
 .container-widget ul.ul{
@@ -640,13 +641,15 @@ a.bubble {
     margin-bottom: 0;
 }
 
+.suiv-prec{
+    text-align: center;
+}
 
 .pagination {
     clear:both;position:relative;
     font-size:12px;
     line-height:13px;
     width: 100%;
-    text-align: center;
     margin-bottom: 20px;
 }
  
