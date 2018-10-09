@@ -1,0 +1,60 @@
+<h4 class="searchTermsAlert">Résultats de recherche pour "<?php echo htmlspecialchars($_GET['s']);?>" :</h4>
+
+<?php
+
+    $texts = array(array('Actualités','d\'actualités','NLP','nlp'),array('Patrithèque','Patrithèque','PAT','pat'));
+
+    for ($i = 0 ; $i < 2 ; $i++){
+
+        echo "<h2 class='etiquetteSearch'>".$texts[$i][0]."</h2>";
+
+        query_posts( array(
+            'category_name'  => $texts[$i][2],
+            'posts_per_page' => 5,
+            'paged' => 1,
+            's' => htmlspecialchars($_GET['s']),
+        ));
+
+        if (have_posts()) :
+            while (have_posts()) : the_post(); ?>
+
+                <div class="col-lg-12">
+                    <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=".htmlspecialchars($_GET['s']); } ?>">
+                        <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php echo getAllCategorieSlug(get_the_category()) ;?>">
+                            <h4 class="post-title">
+                                <?php the_title(); ?>
+                            </h4>
+
+                            <?php
+
+                                if($i == 0){ ?>
+
+                                    <span class="post-info">
+                                        <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>"><?php the_time('l d F Y'); ?></time>
+                                    </span>
+
+                                <?php } else {
+
+                                     the_excerpt();
+
+                                } ?>
+                    </a>
+                </div>
+
+            <?php endwhile; ?>
+
+            <div class="col-lg-12 allResults">
+                <a href="<?php if(isset($_GET['s'])){ echo "?s=".htmlspecialchars($_GET['s'])."&all=".$texts[$i][3]; } ?>" class="allResults">
+                    Afficher tous les résultats <?php echo $texts[$i][1];?>
+                </a>
+            </div>
+
+        <?php else : ?>
+
+            <p class="nothing">
+                Il n'y a pas de Post à afficher !
+            </p>
+
+        <?php endif;
+
+    }?>

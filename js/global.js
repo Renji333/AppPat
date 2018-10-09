@@ -22,3 +22,7 @@ function getParam(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, ' '));
 }
+
+$("select#filtrePatSearch").on('change', function(){
+    window.location = $(this).val();
+});

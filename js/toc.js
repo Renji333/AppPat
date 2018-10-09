@@ -16,7 +16,6 @@ $(function() {
         navbar: {
             title: "Actualités",
         },
-
         navbars		: [
             {
                 type		: 'tabs',

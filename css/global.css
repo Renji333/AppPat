@@ -593,10 +593,11 @@ article.container-article-focus img.focus {
     box-shadow: 0 1px 2px rgba(0,0,0,0);
 }
 
-.container-widget .etiquette{
+.container-widget .etiquette, h2.etiquetteSearch, h4.filtreSearchPat{
     color: #0268AA;
     font-family: poppinslight;
     font-size: 21px;
+    margin-bottom: 5px;
 }
 
 a.blueBubble{
@@ -682,4 +683,50 @@ a.bubble {
 .fixed {
     position: fixed;
     margin-right: 30px;
+}
+
+a[rel="prev"], a[rel="next"] {
+    display: none;
+}
+
+article.container-article.searchLoop {
+    margin-top: 0px;
+}
+
+article.container-article.searchLoop h4{
+    margin-top: 5px;
+}
+
+h4.searchTermsAlert{
+    color: #0268AA;
+}
+
+div.col-lg-12.allResults{
+    text-align: right;
+}
+
+a.allResults {
+    font-family: 'source_sans_prolight';
+    color: #0268AA;
+    font-size: 16px;
+    text-decoration: underline !important;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+h2.etiquetteSearch{
+    font-weight: lighter;
+}
+
+h4.filtreSearchPat{
+    font-weight: lighter;
+    font-size: 18px;
+    display: inline-block;
+    margin: 10px 20px 10px 0px;
+}
+
+select {
+    border: 1px solid #ccc;
+    font-size: 16px;
+    height: 34px;
 }

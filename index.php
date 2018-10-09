@@ -13,16 +13,19 @@
 <?php get_template_part('toc'); ?>
 
 <div class="main-container">
-    <?php get_template_part('loop');?>
-    <div class="col-lg-9 suiv-prec">
-    <?php if( $current_link != home_url().'/'){ ?>
-            <?php pressPagination($pages ='', $range = 2) ;?>
-    <?php } else { ?>
-            <a href="?type=all" class="bubble">
-                Voir toutes les actualités
-            </a>
-    <?php } ?>
-    </div>
+
+    <?php
+
+        if(isset($_GET['s']) && isset($_GET['all']) && $_GET['all'] == 'nlp' || $_GET['all'] == 'pat'){
+            get_template_part('loop_search_detail');
+        } else if(isset($_GET['s'])){
+            get_template_part('loop_search');
+        } else{
+            get_template_part('loop');
+        }
+
+        ?>
+
 </div>
 
 <?php get_footer(); ?>

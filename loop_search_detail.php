@@ -1,0 +1,92 @@
+<h4 class="searchTermsAlert">Résultats de recherche pour "<?php echo htmlspecialchars($_GET['s']);?>" :</h4>
+
+<?php
+
+    $drapNlp = true;
+    $cat = "NLP";
+    $catFiltre = "";
+    $title = "Actualités";
+
+    if(isset($_GET['all']) && $_GET['all'] == 'nlp' || $_GET['all'] == 'pat'){
+
+        if($_GET['all'] == 'pat'){
+
+            $drapNlp = false;
+            $cat = "PAT";
+            $title = "Patrithèque";
+
+            if(isset($_GET['categorie_id'])){
+
+                $catFiltre = intval($_GET['categorie_id']);
+
+            }
+
+        }
+
+    }
+
+    echo "<h2 class='etiquetteSearch'>".$title."</h2>";
+
+    if(!$drapNlp){
+
+        echo "<h4 class='filtreSearchPat'>Filtres : </h4>";
+        echo "<select id='filtrePatSearch'>";
+
+        makeFiltrePat(term_exists( "PAT", 'category' )['term_id'], home_url(), $_GET['s']);
+
+        echo "</select>";
+
+    }
+
+    $args = array('posts_per_page' => 15, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1, 's' => htmlspecialchars($_GET['s']));
+
+    if($catFiltre != ""){
+        $args['cat']  = $catFiltre;
+    } else {
+        $args['category_name']  = $cat;
+    }
+    
+    query_posts($args);
+
+    if (have_posts()) :
+        while (have_posts()) : the_post(); ?>
+
+            <div class="col-lg-12">
+                <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=".htmlspecialchars($_GET['s']); } ?>">
+                    <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php echo getAllCategorieSlug(get_the_category()) ;?>">
+                        <h4 class="post-title">
+                            <?php the_title(); ?>
+                        </h4>
+
+                        <?php
+
+                            if($drapNlp){ ?>
+
+                                <span class="post-info">
+                                    <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>"><?php the_time('l d F Y'); ?></time>
+                                </span>
+
+                            <?php } else {
+
+                                the_excerpt();
+
+                            }
+
+                        ?>
+
+                </a>
+            </div>
+
+        <?php endwhile; ?>
+
+        <div class="col-lg-9 suiv-prec">
+            <?php pressPagination($pages ='', $range = 2) ;?>
+        </div>
+
+    <?php else : ?>
+
+        <p class="nothing">
+            Il n'y a pas de Post à afficher !
+        </p>
+
+    <?php endif;

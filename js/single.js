@@ -1,5 +1,32 @@
 jQuery(document).ready(function($) {
 
+    var currentId = parseInt($(".mm-listitem_selected").find('a').attr("page-htm-id"));
+
+    if(currentId != 0) {
+
+        $("#seq_prev").parent().css("display", "inline-block");
+
+        $("#seq_prev").parent().click(function () {
+            var prev = currentId - 1;
+            window.location.href = $("a[page-htm-id='" + prev + "']").attr('href');
+            return false;
+        });
+
+    }
+
+    var next = currentId + 1;
+
+    if($("a[page-htm-id='"+next+"']").attr("href") != undefined){
+
+        $("#seq_next").parent().css("display","inline-block");
+
+        $("#seq_next").parent().click(function () {
+            window.location.href = $("a[page-htm-id='"+next+"']").attr('href');
+            return false;
+        });
+
+    }
+
     var rhhlTerms = getCookie("rhhl");
 
     MakeHHL();
@@ -28,7 +55,7 @@ jQuery(document).ready(function($) {
 
     function MakeHHL() {
 
-        var s = getParam('s');
+        var s = getParam('query');
 
         if (rhhlTerms) {
 

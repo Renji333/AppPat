@@ -138,3 +138,12 @@
 
     <?php } ?>
 
+<div class="col-lg-9 suiv-prec">
+    <?php if( $current_link != home_url().'/'){ ?>
+        <?php pressPagination($pages ='', $range = 2) ;?>
+    <?php } else { ?>
+        <a href="?type=all" class="bubble">
+            Voir toutes les actualités
+        </a>
+    <?php } ?>
+</div>
