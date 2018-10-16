@@ -396,22 +396,22 @@ article.container-article::before {
 
 article.post.fiscalite::before,
 article.fiscalite.container-article::before,
-article.post.fiscalite-nlp::before,
-article.fiscalite-nlp.container-article::before {
+article.post.pat_fiscalite::before,
+article.pat_fiscalite.container-article::before {
     background-image: url("../img/fiscalite.svg");
 }
 
 article.post.famille::before,
 article.famille.container-article::before,
-article.post.famille-nlp::before,
-article.famille-nlp.container-article::before {
+article.post.pat_famille::before,
+article.pat_famille.container-article::before {
     background-image: url("../img/famille.svg");
 }
 
 article.post.placements::before,
 article.placements.container-article::before,
-article.post.placements-nlp::before,
-article.placements-nlp.container-article::before {
+article.post.pat_placements::before,
+article.pat_placements.container-article::before {
     background-image: url("../img/placements.svg");
 }
 
@@ -729,4 +729,68 @@ select {
     border: 1px solid #ccc;
     font-size: 16px;
     height: 34px;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+    position: relative;
+    font-family: Arial;
+    display: inline-block;
+}
+.custom-select select {
+    display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+    background-color: white;
+    border: 1px solid #000;
+    border-top-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-top-color: rgb(0, 0, 0);
+    border-right-color: rgb(0, 0, 0);
+    border-bottom-color: rgb(0, 0, 0);
+    border-left-color: rgb(0, 0, 0);
+    border-color: #0003 #0003 rgba(0, 0, 0, 0.23) #0003;
+    color: #12000f;
+    padding: 8px 16px;cursor: pointer;border-radius: 4px;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 16px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid #060606b3;
+    border-top-color: rgba(99, 99, 100, 0.53);
+    border-right-color: rgba(188, 175, 175, 0);
+    border-bottom-color: rgba(188, 175, 175, 0);
+    border-left-color: rgba(188, 175, 175, 0);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div {
+    color: #12000f;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+}
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+.select-items div:hover, .same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }

@@ -30,11 +30,12 @@
     if(!$drapNlp){
 
         echo "<h4 class='filtreSearchPat'>Filtres : </h4>";
-        echo "<select id='filtrePatSearch'>";
+        echo "<div class=\"custom-select\" style=\"width:200px;\">";
+        echo "<select id='filtrePatSearch' >";
 
         makeFiltrePat(term_exists( "PAT", 'category' )['term_id'], home_url(), $_GET['s']);
 
-        echo "</select>";
+        echo "</select></div>";
 
     }
 

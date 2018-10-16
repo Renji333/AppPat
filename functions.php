@@ -54,7 +54,9 @@ function getMoreReadsByCat($e){
 
     global $wpdb;
 
-    $results = $wpdb->get_results("SELECT COUNT(DISTINCT v.UID) AS vues, p.`post_title`, p.`guid` FROM `{$wpdb->prefix}posts` as p, {$wpdb->prefix}posts_views as v, `{$wpdb->prefix}terms` as t, `{$wpdb->prefix}term_relationships` as r  WHERE p.`post_type` = 'post' AND p.`ID` = r.`object_id` AND r.`term_taxonomy_id` IN (SELECT `term_id` FROM `{$wpdb->prefix}terms` WHERE `name` LIKE '%$e%') AND v.PID = p.ID GROUP BY v.PID ORDER BY vues DESC LIMIT 0,5");
+    $date = date('Y-m-d H:i:s',time()-(14*86400));
+
+    $results = $wpdb->get_results("SELECT COUNT(DISTINCT v.UID) AS vues, p.`post_title`, p.`guid` FROM `{$wpdb->prefix}posts` as p, {$wpdb->prefix}posts_views as v, `{$wpdb->prefix}terms` as t, `{$wpdb->prefix}term_relationships` as r  WHERE p.post_date <= '$date' AND p.`post_type` = 'post' AND p.`ID` = r.`object_id` AND r.`term_taxonomy_id` IN (SELECT `term_id` FROM `{$wpdb->prefix}terms` WHERE `name` LIKE '%$e%') AND v.PID = p.ID GROUP BY v.PID ORDER BY vues DESC LIMIT 0,5");
 
     foreach ($results as $item){
         echo "<li class='puce'><a href='$item->guid'>$item->post_title</a></li>";
@@ -101,6 +103,7 @@ function writeNlpToc($e,$link){
 function makeFiltrePat($e,$home,$s){
 
     $categories = get_categories(array( 'parent' => $e ));
+    $count = 0 ;
 
     if($categories){
 
@@ -116,13 +119,15 @@ function makeFiltrePat($e,$home,$s){
 
             }
 
-            echo "<option value='".$home.'?s='.$s.'&all=pat&categorie_id='.$c->term_id."' ".$select.">".$c->cat_name."</option>";
+            echo "<option data-id-option='$count' value='".$home.'?s='.$s.'&all=pat&categorie_id='.$c->term_id."' ".$select.">".$c->cat_name."</option>";
 
             $sub_categories = get_categories(array( 'parent' => $c->term_id ));
 
             if($sub_categories){
                 makeFiltrePat($c->term_id,$home,$s);
             }
+
+            $count += 1 ;
 
         }
 
