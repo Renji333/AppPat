@@ -73,7 +73,7 @@
                             <?php the_title(); ?>
                         </h4>
                         <span class="post-info">
-                            <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>"><?php the_time('l d F Y'); ?></time>
+                            Article du <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>"><?php the_time('l d F Y'); ?></time>
                         </span>
                         <?php the_excerpt(); ?>
                     </article>
@@ -124,7 +124,7 @@
                             <?php the_title(); ?>
                         </h4>
                         <span class="post-info">
-                            <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>"><?php the_time('l d F Y'); ?></time>
+                            <time datetime="<?php echo get_the_date( 'Y-m-d' ).' '; echo the_time( 'H:i' );?>">Article du <?php the_time('l d F Y'); ?></time>
                         </span>
                         <?php the_excerpt(); ?>
                     </article>

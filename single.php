@@ -29,7 +29,7 @@
 
                     <?php if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') !== false) { ?>
                         <p class="post-info">
-                            <?php the_date(); ?>
+                            Article du <?php the_date(); ?>
                         </p>
                     <?php } ?>
 

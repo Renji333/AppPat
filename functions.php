@@ -26,7 +26,7 @@ add_action('init', function(){
     $user = wp_signon( $creds, false );
 
     if(is_wp_error($user)){
-        wp_die('Login failed. Wrong password or user name?');
+        wp_die('Login failed. Wrong password or user name ?');
     }
 
     header('Location: ' . $_SERVER['REQUEST_URI']);
