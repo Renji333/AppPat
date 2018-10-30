@@ -43,7 +43,7 @@
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Rechercher..." name="s">
                     <span class="input-group-btn">
-                        <button class="btn" type="submit">Rechercher</button>
+                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                     </span>
                 </div><!-- /input-group -->
             </form>

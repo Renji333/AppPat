@@ -1,4 +1,4 @@
-<h4 class="searchTermsAlert">Résultats de recherche pour "<?php echo htmlspecialchars($_GET['s']);?>" :</h4>
+<h4 class="searchTermsAlert">Résultats de recherche pour '<?php echo htmlspecialchars(str_replace('\\','',$_GET['s']));?>' :</h4>
 
 <?php
 
@@ -12,14 +12,14 @@
             'category_name'  => $texts[$i][2],
             'posts_per_page' => 5,
             'paged' => 1,
-            's' => htmlspecialchars($_GET['s']),
+            's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
         ));
 
         if (have_posts()) :
             while (have_posts()) : the_post(); ?>
 
                 <div class="col-lg-12">
-                    <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=".htmlspecialchars($_GET['s']); } ?>">
+                    <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=". htmlspecialchars(str_replace('\\','',$_GET['s'])); } ?>">
                         <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php echo getAllCategorieSlug(get_the_category()) ;?>">
                             <h4 class="post-title">
                                 <?php the_title(); ?>
@@ -44,7 +44,7 @@
             <?php endwhile; ?>
 
             <div class="col-lg-12 allResults">
-                <a href="<?php if(isset($_GET['s'])){ echo "?s=".htmlspecialchars($_GET['s'])."&all=".$texts[$i][3]; } ?>" class="allResults">
+                <a href="<?php if(isset($_GET['s'])){ echo "?s=". htmlspecialchars(str_replace('\\','',$_GET['s']))."&all=".$texts[$i][3]; } ?>" class="allResults">
                     Afficher tous les résultats <?php echo $texts[$i][1];?>
                 </a>
             </div>

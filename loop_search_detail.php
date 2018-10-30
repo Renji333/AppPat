@@ -1,4 +1,4 @@
-<h4 class="searchTermsAlert">Résultats de recherche pour "<?php echo htmlspecialchars($_GET['s']);?>" :</h4>
+<h4 class="searchTermsAlert">Résultats de recherche pour '<?php echo htmlspecialchars(str_replace('\\','',$_GET['s']));?>' :</h4>
 
 <?php
 
@@ -33,13 +33,13 @@
         echo "<div class=\"custom-select\" style=\"width:200px;\">";
         echo "<select id='filtrePatSearch' >";
 
-        makeFiltrePat(term_exists( "PAT", 'category' )['term_id'], home_url(), $_GET['s']);
+        makeFiltrePat(term_exists( "PAT", 'category' )['term_id'], home_url(),  htmlspecialchars(str_replace('\\','',$_GET['s'])) );
 
         echo "</select></div>";
 
     }
 
-    $args = array('posts_per_page' => 15, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1, 's' => htmlspecialchars($_GET['s']));
+    $args = array('posts_per_page' => 15, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1, 's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])));
 
     if($catFiltre != ""){
         $args['cat']  = $catFiltre;
@@ -53,7 +53,7 @@
         while (have_posts()) : the_post(); ?>
 
             <div class="col-lg-12">
-                <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=".htmlspecialchars($_GET['s']); } ?>">
+                <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=". htmlspecialchars(str_replace('\\','',$_GET['s']));  } ?>">
                     <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php echo getAllCategorieSlug(get_the_category()) ;?>">
                         <h4 class="post-title">
                             <?php the_title(); ?>

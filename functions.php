@@ -34,6 +34,14 @@ add_action('init', function(){
 
 });
 
+function getCurrentLink(){
+	return "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+}
+
+function getCurrentLinkWithoutParams(){
+	return explode("?",set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ))[0];
+}
+
 function insert_posts_views($uid,$pid){
     global $wpdb;
 

@@ -161,7 +161,7 @@ header {
     color: #004673;
     font-family: poppinsbold;
     font-size: 12px;
-    padding: 8px 12px;
+    padding: 7px 12px;
     position: relative;
     background-color: #fff;
     display: inline-block;
@@ -793,4 +793,8 @@ select {
 }
 .select-items div:hover, .same-as-selected {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+.fa{
+    font-size: 16px;
 }

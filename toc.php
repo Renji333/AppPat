@@ -6,7 +6,7 @@
 
             <?php
 
-                if(home_url()."/" == set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] )){
+                if(home_url()."/" == getCurrentLinkWithoutParams()){
                     $class = " class=' Selected '";
                 }else{
                     $class = "";
@@ -19,7 +19,7 @@
             <?php
 
                     global $wp;
-                    $current_url  = set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] );
+                    $current_url  = getCurrentLinkWithoutParams();
 
                     $tags = term_exists( "NLP", 'category' );
                     writeNlpToc($tags['term_id'],$current_url);
