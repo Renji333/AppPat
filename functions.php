@@ -42,6 +42,16 @@ function getCurrentLinkWithoutParams(){
 	return explode("?",set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ))[0];
 }
 
+function cleanExcerpt($title,$excerpt){
+    $title = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", str_replace("–","-",$title))));
+    $excerpt = trim($excerpt);
+    $str = preg_replace("/$title Résumé/mi", "", $excerpt);
+    $str = preg_replace("/$title /mi", "", $str);
+    $str = str_replace("$title Résumé", "", $str);
+    $str = str_replace("$title", "", $str);
+    echo "<p>$str</p>";
+}
+
 function insert_posts_views($uid,$pid){
     global $wpdb;
 
