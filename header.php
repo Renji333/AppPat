@@ -39,14 +39,27 @@
         </div>
 
         <div class="HeaderBlock AppSearch">
+
+            <div class="custom-select">
+                <select id='filtreSearch' >
+                    <option data-id-option='0' value='null' >Filtres</option>
+	                <?php makeFiltre(); ?>
+                </select>
+            </div>
+
             <form role="search" method="get" class="search-form" action="<?php echo home_url();?>">
                 <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Rechercher..." name="s">
+
+                    <input type="text" class="form-control" placeholder="Rechercher..." name="s"/>
+                    <input id="filtreHiddenInput" type="hidden" name="filtre" value="all"/>
+
                     <span class="input-group-btn">
                         <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                     </span>
+
                 </div><!-- /input-group -->
             </form>
+
         </div>
 
     </header>

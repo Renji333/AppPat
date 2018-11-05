@@ -153,6 +153,45 @@ function makeFiltrePat($e,$home,$s){
 
 }
 
+function makeFiltre(){
+
+	$count = 1 ;
+
+	$categories =  get_categories();
+
+	$toAvoid = array("NLP","PAT","integrale","Non classé");
+
+	$categoriesString = array();
+	$categoriesIds = array();
+
+	if($categories){
+
+		foreach ($categories as $c) {
+
+		    if(!in_array($c->cat_name,$toAvoid)){
+
+                if(!in_array($c->cat_name,$categoriesString)){
+                    $categoriesString[$count] = $c->cat_name;
+                    $categoriesIds[$count] = "$c->term_id";
+                }else{
+                    $matches = array_search($c->cat_name, $categoriesString);
+                    $categoriesIds[$matches] = "$categoriesIds[$matches],$c->term_id";
+                }
+
+            }
+
+            $count += 1 ;
+
+		}
+
+		foreach ($categoriesString as $k => $c){
+			echo "<option data-id-option='$count' value='$categoriesIds[$k]' >".$c."</option>";
+		}
+
+	}
+
+}
+
 function pressPagination($pages = '', $range = 2)
 {
     global $paged;

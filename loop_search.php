@@ -3,17 +3,58 @@
 <?php
 
     $texts = array(array('Actualités','d\'actualités','NLP','nlp'),array('Patrithèque','Patrithèque','PAT','pat'));
+    $textsTest = array(array('Actualités','d\'actualités','NLP','nlp'),array('Patrithèque','Patrithèque','integrale','integrale'));
+    $keepcat = "";
 
     for ($i = 0 ; $i < 2 ; $i++){
 
         echo "<h2 class='etiquetteSearch'>".$texts[$i][0]."</h2>";
 
-        query_posts( array(
-            'category_name'  => $texts[$i][2],
-            'posts_per_page' => 5,
-            'paged' => 1,
-            's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
-        ));
+        if(isset($_GET['filtre']) && htmlspecialchars($_GET['filtre']) != "all"){
+
+            $filtres = explode(",",htmlspecialchars($_GET['filtre']));
+            $drap = true;
+
+            foreach ($filtres as $f){
+
+                $category = get_category((int) $f );
+	            $parent = get_cat_ID($textsTest[$i][2]);
+
+                if( $category->category_parent == $parent && $drap){
+
+	                query_posts( array(
+		                'cat'  => $category->term_id,
+		                'posts_per_page' => 5,
+		                'paged' => 1,
+		                's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+	                ));
+
+	                $keepcat = $category->term_id;
+                    $drap = false;
+
+                }else if($drap){
+
+	                query_posts( array(
+		                'category_name'  => "null",
+		                'posts_per_page' => 5,
+		                'paged' => 1,
+		                's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+	                ));
+
+                }
+
+            }
+
+        }else{
+
+	        query_posts( array(
+		        'category_name'  => $texts[$i][2],
+		        'posts_per_page' => 5,
+		        'paged' => 1,
+		        's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+	        ));
+
+        }
 
         if (have_posts()) :
             while (have_posts()) : the_post(); ?>
@@ -45,8 +86,22 @@
 
             <?php endwhile; ?>
 
+	        <?php
+
+                if(isset($_GET['s'])){
+
+                    $urlDetailParams = "?s=". htmlspecialchars(str_replace('\\','',$_GET['s']))."&all=".$texts[$i][3];
+
+	                if($keepcat != ""){
+		                $urlDetailParams = $urlDetailParams."&categorie_id=".$keepcat;
+                    }
+
+                }
+
+            ?>
+
             <div class="col-lg-12 allResults">
-                <a href="<?php if(isset($_GET['s'])){ echo "?s=". htmlspecialchars(str_replace('\\','',$_GET['s']))."&all=".$texts[$i][3]; } ?>" class="allResults">
+                <a href="<?php echo $urlDetailParams;?>" class="allResults">
                     Afficher tous les résultats <?php echo $texts[$i][1];?>
                 </a>
             </div>

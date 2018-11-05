@@ -15,29 +15,17 @@
             $cat = "PAT";
             $title = "Patrithèque";
 
-            if(isset($_GET['categorie_id'])){
-
-                $catFiltre = intval($_GET['categorie_id']);
-
-            }
-
         }
 
     }
 
-    echo "<h2 class='etiquetteSearch'>".$title."</h2>";
+    if(isset($_GET['categorie_id'])){
 
-    if(!$drapNlp){
-
-        echo "<h4 class='filtreSearchPat'>Filtres : </h4>";
-        echo "<div class=\"custom-select\" style=\"width:200px;\">";
-        echo "<select id='filtrePatSearch' >";
-
-        makeFiltrePat(term_exists( "PAT", 'category' )['term_id'], home_url(),  htmlspecialchars(str_replace('\\','',$_GET['s'])) );
-
-        echo "</select></div>";
+        $catFiltre = intval($_GET['categorie_id']);
 
     }
+
+    echo "<h2 class='etiquetteSearch'>".$title."</h2>";
 
     $args = array('posts_per_page' => 15, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1, 's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])));
 
@@ -46,7 +34,7 @@
     } else {
         $args['category_name']  = $cat;
     }
-    
+
     query_posts($args);
 
     if (have_posts()) :
