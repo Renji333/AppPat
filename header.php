@@ -5,7 +5,7 @@
 
     <meta charset="<?php bloginfo('charset'); ?>">
     <title><?php bloginfo('name'); ?><?php wp_title(); ?></title>
-
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/jquery.mmenu.all.css" type="text/css"/>
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" />
 
