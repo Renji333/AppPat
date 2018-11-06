@@ -18,13 +18,12 @@
 
             <?php
 
-                    global $wp;
-                    $current_url  = getCurrentLinkWithoutParams();
+                global $wp;
+                $current_url  = getCurrentLinkWithoutParams();
+                $tags = term_exists( "NLP", 'category' );
+                writeNlpToc($tags['term_id'],$current_url);
 
-                    $tags = term_exists( "NLP", 'category' );
-                    writeNlpToc($tags['term_id'],$current_url);
-
-                    ?>
+                ?>
 
         </ul>
     </div>
