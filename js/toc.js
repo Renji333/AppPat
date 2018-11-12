@@ -4,7 +4,6 @@ $(function() {
             load : true,
         },
         setSelected	: true,
-        counters	: true,
         sidebar		: {
             collapsed		: {
                 use 			: '(min-width: 450px)',

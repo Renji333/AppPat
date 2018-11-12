@@ -15,7 +15,7 @@
 
                     <div class="actionsIcons">
 
-                        <i id="tintBtn" class="fa fa-paint-brush" aria-hidden="true" style="display: none;"></i>
+                        <i id="tintBtn" class="fa fa-paint-brush" aria-hidden="true"></i>
                         <i id="printBtn" class="fa fa-print" aria-hidden="true"></i>
 
                         <?php if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') == false) { ?>

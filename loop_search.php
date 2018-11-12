@@ -22,24 +22,24 @@
 
                 if( $category->category_parent == $parent && $drap){
 
-	                query_posts( array(
-		                'cat'  => $category->term_id,
-		                'posts_per_page' => 5,
-		                'paged' => 1,
-		                's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
-	                ));
+                    query_posts( array(
+                        'cat'  => $category->term_id,
+                        'posts_per_page' => 5,
+                        'paged' => 1,
+                        's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+                    ));
 
 	                $keepcat = $category->term_id;
                     $drap = false;
 
                 }else if($drap){
 
-	                query_posts( array(
-		                'category_name'  => "null",
-		                'posts_per_page' => 5,
-		                'paged' => 1,
-		                's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
-	                ));
+                    query_posts( array(
+                        'category_name'  => "null",
+                        'posts_per_page' => 5,
+                        'paged' => 1,
+                        's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+                    ));
 
                 }
 
@@ -47,12 +47,12 @@
 
         }else{
 
-	        query_posts( array(
-		        'category_name'  => $texts[$i][2],
-		        'posts_per_page' => 5,
-		        'paged' => 1,
-		        's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
-	        ));
+            query_posts( array(
+                'category_name'  => $texts[$i][2],
+                'posts_per_page' => 5,
+                'paged' => 1,
+                's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])),
+            ));
 
         }
 
