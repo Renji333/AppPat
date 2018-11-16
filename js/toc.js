@@ -1,15 +1,11 @@
 $(function() {
     $('nav#menu').mmenu({
+
         lazySubmenus: {
             load : true,
         },
         setSelected	: true,
         sidebar		: {
-            collapsed		: {
-                use 			: '(min-width: 450px)',
-                size			: 40,
-                hideNavbar		: false
-            },
             expanded		: 800
         },
         navbar: {

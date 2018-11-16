@@ -53,6 +53,7 @@ jQuery(document).ready(function($) {
 
     });
 
+    // fonction qui récupère les paramètres de recherche dans l'url et surlignera ces termes dans la page.
     function MakeHHL() {
 
         var s = getParam('query');

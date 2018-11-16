@@ -19,6 +19,8 @@
 
         } else if(isset($_GET['categorie']) && $_GET['categorie'] != null){
 
+	        // Récupération des posts, si il y a une catégorie comme "fiscalité" pour les newsletters
+
             query_posts( array(
                 'cat'  => intval($_GET['categorie']),
                 'paged' => get_query_var('paged') ? get_query_var('paged') : 1,
@@ -30,6 +32,8 @@
             $catSupplement = "pour la catégorie \"$cat\"";
 
         } else {
+
+	        // Récupération des posts par défaut
 
             query_posts( array(
                 'category_name'  => 'NLP',
@@ -49,6 +53,7 @@
                 <?php
 
                 if($i == 0){
+	                // Si il s'agit de l'article en focus
                     echo '<div class="col-lg-12">';
                     $classArticle = "container-article container-article-focus ";
                 } elseif ($i == 1){

@@ -1,5 +1,6 @@
 <?php
 
+// Vérification que l'utilisateur est bien connecté.
 if ( !is_user_logged_in() && home_url().'/' != "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") {
 
     wp_redirect( home_url());
@@ -26,7 +27,7 @@ add_action('init', function(){
     $user = wp_signon( $creds, false );
 
     if(is_wp_error($user)){
-        wp_die('Login failed. Wrong password or user name ?');
+        header('Location: ' . $_SERVER['REQUEST_URI'].'?er=utu');
     }
 
     header('Location: ' . $_SERVER['REQUEST_URI']);
@@ -42,6 +43,7 @@ function getCurrentLinkWithoutParams(){
 	return explode("?",set_url_scheme( 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'] ))[0];
 }
 
+// Néttoyage des contextes de recherche
 function cleanExcerpt($title,$excerpt){
     $title = trim(preg_replace('/\s\s+/', ' ', str_replace("\n", " ", str_replace("–","-",$title))));
     $excerpt = trim($excerpt);
@@ -68,11 +70,12 @@ function insert_posts_views($uid,$pid){
 
 }
 
+// Récupération des acticles vieux de 30 jours, les plus vues.
 function getMoreReadsByCat($e){
 
     global $wpdb;
 
-    $date = date('Y-m-d H:i:s',time()-(14*86400));
+    $date = date('Y-m-d H:i:s',time()-(30*86400));
 
     $results = $wpdb->get_results("SELECT COUNT(DISTINCT v.UID) AS vues, p.`post_title`, p.`guid` FROM `{$wpdb->prefix}posts` as p, {$wpdb->prefix}posts_views as v, `{$wpdb->prefix}terms` as t, `{$wpdb->prefix}term_relationships` as r  WHERE p.post_date <= '$date' AND p.`post_type` = 'post' AND p.`ID` = r.`object_id` AND r.`term_taxonomy_id` IN (SELECT `term_id` FROM `{$wpdb->prefix}terms` WHERE `name` LIKE '%$e%') AND v.PID = p.ID GROUP BY v.PID ORDER BY vues DESC LIMIT 0,5");
 
@@ -84,6 +87,7 @@ function getMoreReadsByCat($e){
 
 }
 
+// Récupération des slug des catégories passées en paramètres.
 function getAllCategorieSlug($e){
 
     $ret = '';
@@ -96,6 +100,7 @@ function getAllCategorieSlug($e){
 
 }
 
+// Ecriture du sommaire Newsletters dans le sommaire
 function writeNlpToc($e,$link){
 
     $categories = get_categories(array( 'parent' => $e ));
@@ -118,6 +123,7 @@ function writeNlpToc($e,$link){
 
 }
 
+// Ecriture des balises <option> pour la liste déroulante "filtre" du header pour la recherche.
 function makeFiltrePat($e,$home,$s){
 
     $categories = get_categories(array( 'parent' => $e ));
@@ -153,6 +159,7 @@ function makeFiltrePat($e,$home,$s){
 
 }
 
+// Ecriture des balises <option> pour la liste déroulante "filtre" du header pour la recherche.
 function makeFiltre(){
 
 	$count = 1 ;

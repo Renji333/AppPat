@@ -845,6 +845,33 @@ select {
         width: 115px;
     }
 
+    article.container-article-focus {
+        padding-left: 10px !important;
+    }
+
+    article.container-article-focus img.focus {
+        position: relative !important;
+        display: block;
+        top: 4px !important;
+        width: 100%;
+        margin: auto;
+        max-width: 100% !important;
+        left: 0px !important;
+    }
+
+    .titleFocus {
+        top: 5px;
+        left: 10px;
+    }
+
+    nav#menu{
+        display: block !important;
+        width: 100%;
+        max-width: 100%;
+        z-index: 99;
+        margin-top: 70px;
+    }
+
 }
 
 /* XS */

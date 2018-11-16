@@ -27,6 +27,7 @@
 
     echo "<h2 class='etiquetteSearch'>".$title."</h2>";
 
+    // Récupération des paramètres, critères pour les posts à afficher.
     $args = array('posts_per_page' => 15, 'paged' => get_query_var('paged') ? get_query_var('paged') : 1, 's' => str_replace("&quot;",'"',htmlspecialchars($_GET['s'])));
 
     if($catFiltre != ""){
@@ -35,6 +36,7 @@
         $args['category_name']  = $cat;
     }
 
+    // Récupération des posts
     query_posts($args);
 
     if (have_posts()) :
@@ -42,7 +44,7 @@
 
             <div class="col-lg-12">
                 <a href="<?php the_permalink(); if(isset($_GET['s'])){ echo "?query=". htmlspecialchars(str_replace('\\','',$_GET['s']));  } ?>">
-                    <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php echo getAllCategorieSlug(get_the_category()) ;?>">
+                    <article id="<?php the_ID(); ?>" class="container-article searchLoop <?php /* Récupération & Affichage des catégories */ echo getAllCategorieSlug(get_the_category()) ;?>">
                         <h4 class="post-title">
                             <?php the_title(); ?>
                         </h4>

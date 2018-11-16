@@ -36,6 +36,8 @@
             <a href="<?php echo wp_logout_url('$index.php'); ?>">
                 <img src="<?php bloginfo('template_directory'); ?>/img/logout.svg" alt="..." class="LogOutIcon"/>
             </a>
+
+            <a href="#menu" style="height: 50px; width: 50px; background-color: #1a4159;"><span></span></a>
         </div>
 
         <div class="HeaderBlock AppSearch">
@@ -50,7 +52,7 @@
             <form role="search" method="get" class="search-form" action="<?php echo home_url();?>">
                 <div class="input-group">
 
-                    <input type="text" class="form-control" placeholder="Rechercher..." name="s"/>
+                    <input type="text" class="form-control" placeholder="Rechercher..." name="s" value="<?php if( isset($_GET['s']) && $_GET['s'] != "" ){ echo htmlspecialchars($_GET['s']); }?>"/>
                     <input id="filtreHiddenInput" type="hidden" name="filtre" value="all"/>
 
                     <span class="input-group-btn">

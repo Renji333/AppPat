@@ -1,8 +1,12 @@
 <?php get_header(); ?>
-<?php get_template_part('toc'); ?>
+
+<?php
+// Récupération du sommaire
+get_template_part('toc'); ?>
 
 <?php
     if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') !== false) {
+        // Insertion de la vue de l'utilisateur, si cela c'est pas déjà fait.
         insert_posts_views(get_current_user_id(), get_the_ID());
     }
     ?>
@@ -18,7 +22,8 @@
                         <i id="tintBtn" class="fa fa-paint-brush" aria-hidden="true"></i>
                         <i id="printBtn" class="fa fa-print" aria-hidden="true"></i>
 
-                        <?php if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') == false) { ?>
+                        <?php // Séquencage affiché si l'article n'est pas une newsletter
+                        if (strpos(getAllCategorieSlug(get_the_category()), 'nlp') == false) { ?>
                             <?php previous_post_link('%link', '<i class="fa fa-chevron-left" id="seq_prev" aria-hidden="true"></i>' ); ?>
                             <?php next_post_link( '%link', '<i class="fa fa-chevron-right" id="seq_next" aria-hidden="true"></i>' ); ?>
                         <?php } ?>
@@ -40,8 +45,11 @@
                             the_content();
 
                             global $wpdb;
+
+                            // Récupération des liens annexes
                             $results = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_nlp_links n WHERE p.ID = n.idPostInLink and idPost = ".get_the_ID());
                             $resultsPat = $wpdb->get_results("SELECT n.title, p.guid,p.post_title FROM {$wpdb->prefix}posts p, {$wpdb->prefix}post_to_pat_links n WHERE p.ID = n.idPostInLink and idPost = ".get_the_ID());
+
 
                             if($results != null || $resultsPat != null){
 
@@ -51,6 +59,7 @@
 
                                     echo "<h4>Actualités :</h4>";
 
+                                    // Affichage des liens de Newsletter, si il y en a
                                     foreach ($results as $result)
                                     {
                                         if($result->title == '' || $result->title == null){
@@ -65,6 +74,7 @@
 
                                     echo "<h4>Patrithèque :</h4>";
 
+	                                // Affichage des liens de Patrithèque, si il y en a
                                     foreach ($resultsPat as $result)
                                     {
                                         if($result->title == '' || $result->title == null){
